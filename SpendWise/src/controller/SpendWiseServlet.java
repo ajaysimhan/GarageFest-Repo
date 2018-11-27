@@ -47,8 +47,16 @@ public class SpendWiseServlet extends HttpServlet {
 		case ("getStarted"):
 			response.sendRedirect("accounts.html");
 			break;
+		case ("addAccounts"):
+			response.sendRedirect("accounts.html");
+			break;
+		case ("analyseSpending"):
+			response.sendRedirect("reports.html");
+			break;
+		case ("suggestPortfolio"):
+			response.sendRedirect("products.html");
+			break;
 		}
-
 		out.flush();
 		out.close();
 	}
