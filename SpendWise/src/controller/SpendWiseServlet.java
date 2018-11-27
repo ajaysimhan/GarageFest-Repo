@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,28 +34,38 @@ public class SpendWiseServlet extends HttpServlet {
 			String password = request.getParameter("password");
 			LoginModel lm = new LoginModel();
 			boolean isValidUser = lm.validateUser(username, password);
-			if (true) {
-				response.sendRedirect("index.html");
+			if (isValidUser) {
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/index.html");
+				rd.forward(request, response);
+			} else {
+				request.setAttribute("error", "Invalid Credentials");
+				RequestDispatcher rd = request.getRequestDispatcher("login.html");
+				rd.forward(request, response);
 			}
 			break;
 		case ("logout"):
 			HttpSession session1 = request.getSession(false);
 			if (session1 != null) {
 				session1.invalidate();
-				response.sendRedirect("login.html");
+				RequestDispatcher rd1 = request.getRequestDispatcher("login.html");
+				rd1.forward(request, response);
 			}
 			break;
 		case ("getStarted"):
-			response.sendRedirect("accounts.html");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.html");
+			rd1.forward(request, response);
 			break;
 		case ("addAccounts"):
-			response.sendRedirect("accounts.html");
+			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.html");
+			rd2.forward(request, response);
 			break;
 		case ("analyseSpending"):
-			response.sendRedirect("reports.html");
+			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.html");
+			rd3.forward(request, response);
 			break;
 		case ("suggestPortfolio"):
-			response.sendRedirect("products.html");
+			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.html");
+			rd4.forward(request, response);
 			break;
 		}
 		out.flush();
