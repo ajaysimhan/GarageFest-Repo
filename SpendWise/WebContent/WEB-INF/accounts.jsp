@@ -56,6 +56,7 @@
       <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
       <!--logo end-->
 
+
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -302,13 +303,13 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
+          <li>
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
                           <span>Home</span>
                       </a>
           </li>
-          <li>
+          <li class="active">
             <a class="" href="accounts.html">
                           <i class="icon_documents_alt"></i>
                           <span>Accounts</span>
@@ -327,15 +328,9 @@
                       </a>
           </li>
           <li>
-            <a class="" href="savekittys.html">
+            <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="templateindex.html">
-                          <i class="icon_genius"></i>
-                          <span>Template UIS</span>
                       </a>
           </li>
         </ul>
@@ -343,47 +338,116 @@
       </div>
     </aside>
     <!--sidebar end-->
-
+    
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <!--overview start-->
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i>Home</h3>
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-            </ol>
+      
+      <div class="row">
+            <div class="col-lg-12">
+              <h3 class="page-header"><i class="icon_documents_alt"></i>Accounts</h3>
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                <li><i class="icon_documents_alt"></i>Accounts</li>
+
+              </ol>
+            </div>
           </div>
-        </div>
+        <!--overview start-->
 
         <div class="row">
-        <form action="accounts.html">
           <div class="col-md-12 portlets">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h2><strong>Overview</strong></h2>
               </div>
               <div class="panel-body">
-                Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
-              </br></br></br>
-              More BLAH BLAH BLAH
+                  If planning your purchases in advance is a good idea, buying something on the spur of the moment is a terrible one. Follow these tips to avoid making shopping decisions for the wrong reasons:    
               </br></br></br>
               <div class="col-lg-offset-8 col-lg-9">
-              <button type="submit" class="btn btn-primary">Get Started</button>                          
+              <input type="hidden" name="myAction" value="addAccounts">
+              <button type="submit" class="btn btn-primary">Add Accounts</button>                          
               </div>                        
               </div>
             </div>
           </div>
-          </form>
         </div>
+        
+        <%if (request.getAttribute("addAccount").equals("true")){ %>
+        <div class="row">
+        <div class="col-lg-10">
+            <section class="panel">
+              <header class="panel-heading">
+                Add an Account
+              </header>
+              <div class="panel-body">
+                  <form class="form-horizontal">
+                      <!-- Name -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Account Holder Name</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title">
+                        </div>
+                      </div>
+                      <!-- Account Number -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="content">Account Number</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title">
+                        </div>
+                      </div>
+                       <!-- Buttons -->
+                      <div class="form-group">
+                        <!-- Buttons -->
+                        <div class="col-lg-offset-8 col-lg-9">
+					<input type="hidden" name="myAction" value="addAnAccount">
+                          <button type="submit" class="btn btn-primary">Add Account</button>
+                          
+                        </div>
+                      </div>
+                    </form>
+              </div>
+            </section>
+          </div>
+        </div>
+	<%} %>
+	
         <!-- project team & activity end -->
+	<%if (request.getAttribute("displayAccounts").equals("true")){ %>     
+        <div class="row">
+          <div class="col-md-12 portlets">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2><strong>Your Accounts</strong></h2>
+              </div>
+              <div class="panel-body">
+                  hvgcccgcg                   
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+        <div class="col-md-12 portlets">
+        <section class="panel">
+              <header class="panel-heading">
+                Congratulations!!!!
+              </header>
+              <div class="panel-body">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">You have successfully added accounts</div>
+                  <div class="panel-content">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
+               	<form action="SpendWise">
+               	         <input type="hidden" name="myAction" value="analyseSpending">
+              <button type="submit" class="btn btn-warning btn-block">Analyse my spending</button>                                      
+          </form>
+                </div>              
+              </div>
+            </section>
+            </div>
+        </div>
+       	<%} %>    
 
-      </section>
-      
-    </section>
-    <!--main content end-->
-  </section>
   <!-- container section start -->
 
   <!-- javascripts -->

@@ -56,8 +56,6 @@
       <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
       <!--logo end-->
 
-      
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -304,7 +302,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li>
+          <li class="active">
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
                           <span>Home</span>
@@ -316,7 +314,7 @@
                           <span>Accounts</span>
                       </a>
           </li>
-          <li class="active">
+          <li>
             <a class="" href="reports.html">
                           <i class="icon_piechart"></i>
                           <span>Spending</span>
@@ -329,9 +327,15 @@
                       </a>
           </li>
           <li>
-            <a class="" href="savekitty.html">
+            <a class="" href="savekittys.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="templateindex.html">
+                          <i class="icon_genius"></i>
+                          <span>Template UIS</span>
                       </a>
           </li>
         </ul>
@@ -341,77 +345,43 @@
     <!--sidebar end-->
 
     <!--main content start-->
-    
     <section id="main-content">
-    <section class="wrapper">
-    <div class="row">
-            <div class="col-lg-12">
-              <h3 class="page-header"><i class="icon_piechart"></i>Spending Tracker</h3>
-              <ol class="breadcrumb">
-                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="icon_piechart"></i>Spending</li>
+      <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-laptop"></i>Home</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+            </ol>
+          </div>
+        </div>
 
-              </ol>
+        <div class="row">
+        <form action="SpendWise">
+          <div class="col-md-12 portlets">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2><strong>Overview</strong></h2>
+              </div>
+              <div class="panel-body">
+                Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
+              </br></br></br>
+              More BLAH BLAH BLAH
+              </br></br></br>
+              <div class="col-lg-offset-8 col-lg-9">
+              <input type="hidden" name="myAction" value="getStarted">
+              <button type="submit" class="btn btn-primary">Get Started</button>                          
+              </div>                        
+              </div>
             </div>
           </div>
-    <div class="row">
-	<div class="col-lg-12">
-		<section class="panel">
-			<header class="panel-heading">
-				<h3>General Chart</Char>
-			</header>
-			<div class="panel-body">
-				<div class="tab-pane" id="chartjs">
-					<div class="row">
-
-						<!-- Pie -->
-						<div class="col-lg-6">
-							<section class="panel">
-								<header class="panel-heading">
-                                      Pie
-								</header>
-								<div class="panel-body text-center">
-									<canvas id="pie" height="300" width="400"></canvas>
-								</div>
-							</section>
-						</div>
-						<!-- Doughnut -->
-						<div class="col-lg-6">
-							<section class="panel">
-								<header class="panel-heading">
-                                      Doughnut
-								</header>
-								<div class="panel-body text-center">
-									<canvas id="doughnut" height="300" width="400"></canvas>
-								</div>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-</div>    
-
-<div class="row">
-        <div class="col-md-12 portlets">
-        <section class="panel">
-              <header class="panel-heading">
-               Spend Wisely!!!!
-              </header>
-              <div class="panel-body">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">We have a plan for automatic savings</div>
-                  <div class="panel-content">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
-               	<form action="products.html">
-              <button type="submit" class="btn btn-warning btn-block">See Suggested Portfolios</button>                                      
           </form>
-                </div>              
-              </div>
-            </section>
-            </div>
-        </div>  
-    </section>
+        </div>
+        <!-- project team & activity end -->
+
+      </section>
+      
     </section>
     <!--main content end-->
   </section>
