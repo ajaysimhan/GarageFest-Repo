@@ -55,7 +55,6 @@
       <!--logo start-->
       <a class="logo">
       <form action="SpendWise">
-            <i class="icon_house_alt"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Spend <span class="lite">Wise</span></button>   
          </form>
@@ -320,7 +319,7 @@
    <li>
       <a>
          <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="icon_documents_alt"></i>
             <input type="hidden" name="myAction" value="addAccounts">
             <button type="submit">Accounts</button>   
          </form>
@@ -368,9 +367,9 @@
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-laptop"></i>Home</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a>
+              <li><a>
               <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="fa fa-home"></i></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Home</button>   
          </form>
