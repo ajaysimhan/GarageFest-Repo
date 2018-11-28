@@ -26,7 +26,6 @@ public class Account {
 
 	private static ArrayList<AccountDTO> bulidAccountDTO(String accountDetails) {
 		ArrayList<AccountDTO> dtos = new ArrayList<>();
-
 		Accounts accounts = new Gson().fromJson(accountDetails, Accounts.class);
 		return accounts.getAccounts();
 	}
