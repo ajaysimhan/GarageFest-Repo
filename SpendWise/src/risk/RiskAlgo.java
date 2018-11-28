@@ -17,6 +17,7 @@ import model.BasicInfoModel;
 import products.ProductDTO;
 import suggestion.SuggestionDTO;
 import transactionAPI.TransactionDetails;
+import transactions.TransactionClassifier;
 
 public class RiskAlgo
 {
@@ -35,7 +36,7 @@ public class RiskAlgo
         double inflationRate=2;
         
         Scanner dd = new Scanner(System.in);
-        
+       
         BasicInfoDTO basic = BasicInfoModel.getBasicInfo();
 
         age = basic.getAge();
@@ -61,16 +62,12 @@ public class RiskAlgo
        ArrayList <ProductDTO> pr = getProductsforRisk(financialRisk);
        
        int accNo=123;
+       
+       TransactionClassifier tc = new TransactionClassifier();
        TransactionDetails transactionDetails = TransactionDetails.getTransactionDetails(accNo);
 		
-		FileInputStream fStream = new FileInputStream("resources/Categories.xlsx");
-		TransactionCategory transactionCategory = new TransactionCategory();
-		ArrayList<TransactionType> transactionTypes = transactionCategory.getData(fStream);
 		
-		Classifier classifier = new Classifier();
-		classifier.load(transactionDetails.getDtos(), transactionCategory);
-		
-       double wasteAmount = classifier.getWasteTotal();
+       double wasteAmount = tc.getNonUsefulTransactionAmount();
        double savingsPermonth = ((double)(Math.random()*10))/18 * monthlyIncome;
        
       

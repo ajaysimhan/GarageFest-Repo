@@ -80,7 +80,7 @@ public class TransactionClassifier {
 		return usefulTransactionAmount;
 	}
 	
-	private double getNonUsefulTransactionAmount(){
+	public double getNonUsefulTransactionAmount(){
 		double nonUsefulTransactionAmount= 0;
 		for (TransactionDTO t: transactions) {
             if(nonUsefulCategories.contains(t.getCategoryId())) {
