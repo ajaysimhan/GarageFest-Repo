@@ -38,7 +38,7 @@
 </head>
 <body class="login-img3-body">
   <div class="container">
-    <form class="login-form" action="SpendWise">
+    <form class="login-form" action="SpendWise" method="post">
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
@@ -59,5 +59,9 @@
       </div>
     </form>
   </div>
+  <% if((String)request.getAttribute("error")!=null){ %>
+<p style="color:red;">
+<%=(String)request.getAttribute("error") %>
+<%} %>
 </body>
 </html>

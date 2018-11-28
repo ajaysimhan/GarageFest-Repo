@@ -373,6 +373,7 @@
           </div>
         </div>
         
+        <%if (request.getAttribute("addAccount").equals("true")){ %>
         <div class="row">
         <div class="col-lg-10">
             <section class="panel">
@@ -399,6 +400,7 @@
                       <div class="form-group">
                         <!-- Buttons -->
                         <div class="col-lg-offset-8 col-lg-9">
+					<input type="hidden" name="myAction" value="addAnAccount">
                           <button type="submit" class="btn btn-primary">Add Account</button>
                           
                         </div>
@@ -408,8 +410,10 @@
             </section>
           </div>
         </div>
+	<%} %>
+	
         <!-- project team & activity end -->
-        
+	<%if (request.getAttribute("displayAccounts").equals("true")){ %>     
         <div class="row">
           <div class="col-md-12 portlets">
             <div class="panel panel-default">
@@ -442,7 +446,7 @@
             </section>
             </div>
         </div>
-           
+       	<%} %>    
 
   <!-- container section start -->
 

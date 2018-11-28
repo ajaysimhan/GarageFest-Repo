@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,6 +30,50 @@ public class SpendWiseServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		switch (request.getParameter("myAction")) {
+		case ("logout"):
+			HttpSession session1 = request.getSession(false);
+			if (session1 != null) {
+				session1.invalidate();
+				RequestDispatcher rd1 = request.getRequestDispatcher("login.jsp");
+				rd1.forward(request, response);
+			}
+			break;
+		case ("getStarted"):
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd1.forward(request, response);
+			break;
+		case ("addAccounts"):
+			request.setAttribute("addAccount", "true");
+			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd2.forward(request, response);
+			break;
+		case ("addAnAccount"):
+			request.setAttribute("displayAccounts", "true");
+			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd5.forward(request, response);
+			break;
+		case ("analyseSpending"):
+			ArrayList<String> transactionList = new ArrayList<String>();
+			request.setAttribute("transactionList", transactionList);
+			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
+			rd3.forward(request, response);
+			break;
+		case ("suggestPortfolio"):
+			// read deatils
+			// algorithm
+			// portfolio display
+			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.jsp");
+			rd4.forward(request, response);
+			break;
+		}
+		out.flush();
+		out.close();
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		switch (request.getParameter("myAction")) {
 		case ("login"):
 			String username = request.getParameter("username");
 			String password = request.getParameter("password");
@@ -43,33 +88,7 @@ public class SpendWiseServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 			break;
-		case ("logout"):
-			HttpSession session1 = request.getSession(false);
-			if (session1 != null) {
-				session1.invalidate();
-				RequestDispatcher rd1 = request.getRequestDispatcher("login.jsp");
-				rd1.forward(request, response);
-			}
-			break;
-		case ("getStarted"):
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd1.forward(request, response);
-			break;
-		case ("addAccounts"):
-			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd2.forward(request, response);
-			break;
-		case ("analyseSpending"):
-			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
-			rd3.forward(request, response);
-			break;
-		case ("suggestPortfolio"):
-			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.jsp");
-			rd4.forward(request, response);
-			break;
 		}
-		out.flush();
-		out.close();
 	}
 
 	private HttpSession checkSession(HttpServletRequest request) {
@@ -78,6 +97,7 @@ public class SpendWiseServlet extends HttpServlet {
 		String username = (String) session.getAttribute("username");
 		if (username == null) {
 			username = request.getParameter("username");
+			session.setAttribute("username", username);
 		}
 		return session;
 	}
