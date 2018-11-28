@@ -17,24 +17,24 @@ public class Account {
 	public static AccountDTO getAccount(int accNo) {
 		String accountDetails = null;
 		try {
-			accountDetails = FileUtils.readFileToString(new File("resources/accounts/" + accNo + ".txt")).trim();
+			accountDetails = FileUtils.readFileToString(new File("/resources/accounts/" + accNo + ".txt")).trim();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		ArrayList<AccountDTO> dtos = bulidAccountDTO(accountDetails);
 		return dtos.get(0);
 	}
-	
+
 	private static ArrayList<AccountDTO> bulidAccountDTO(String accountDetails) {
 		ArrayList<AccountDTO> dtos = new ArrayList<>();
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(accountDetails);
 		JsonObject json = (JsonObject) element;
 		JsonArray jsonArray = json.getAsJsonArray("account");
-		for(JsonElement j : jsonArray) {
+		for (JsonElement j : jsonArray) {
 			AccountDTO accountDTO = new Gson().fromJson(j.toString(), AccountDTO.class);
-        	dtos.add(accountDTO);
-        }
+			dtos.add(accountDTO);
+		}
 		return dtos;
 	}
 
