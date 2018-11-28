@@ -364,16 +364,18 @@
               <div class="panel-body">
                   If planning your purchases in advance is a good idea, buying something on the spur of the moment is a terrible one. Follow these tips to avoid making shopping decisions for the wrong reasons:    
               </br></br></br>
+              <form action="SpendWise">
               <div class="col-lg-offset-8 col-lg-9">
               <input type="hidden" name="myAction" value="addAccounts">
               <button type="submit" class="btn btn-primary">Add Accounts</button>                          
-              </div>                        
+              </div>           
+              </form>             
               </div>
             </div>
           </div>
         </div>
         
-        <%if (request.getAttribute("addAccount").equals("true")){ %>
+        <%if (request.getAttribute("action").equals("addAccount")){ %>
         <div class="row">
         <div class="col-lg-10">
             <section class="panel">
@@ -381,7 +383,7 @@
                 Add an Account
               </header>
               <div class="panel-body">
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" action="SpendWise">
                       <!-- Name -->
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Account Holder Name</label>
@@ -413,7 +415,7 @@
 	<%} %>
 	
         <!-- project team & activity end -->
-	<%if (request.getAttribute("displayAccounts").equals("true")){ %>     
+	<%if (request.getAttribute("action").equals("displayAccounts")){ %>     
         <div class="row">
           <div class="col-md-12 portlets">
             <div class="panel panel-default">
@@ -466,7 +468,7 @@
   <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
   <script src="js/owl.carousel.js"></script>
   <!-- jQuery full calendar -->
-  <<script src="js/fullcalendar.min.js"></script>
+  <script src="js/fullcalendar.min.js"></script>
     <!-- Full Google Calendar - Calendar -->
     <script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
     <!--script for this page only-->

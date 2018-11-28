@@ -38,16 +38,17 @@ public class SpendWiseServlet extends HttpServlet {
 			}
 			break;
 		case ("getStarted"):
+			request.setAttribute("action", "");
 			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd1.forward(request, response);
 			break;
 		case ("addAccounts"):
-			request.setAttribute("addAccount", "true");
+			request.setAttribute("action", "addAccount");
 			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd2.forward(request, response);
 			break;
 		case ("addAnAccount"):
-			request.setAttribute("displayAccounts", "true");
+			request.setAttribute("action", "displayAccounts");
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd5.forward(request, response);
 			break;
