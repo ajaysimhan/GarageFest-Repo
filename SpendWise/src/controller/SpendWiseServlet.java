@@ -28,7 +28,6 @@ public class SpendWiseServlet extends HttpServlet {
 		HttpSession session = checkSession(request);
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-
 		switch (request.getParameter("myAction")) {
 		case ("logout"):
 			HttpSession session1 = request.getSession(false);
@@ -73,6 +72,9 @@ public class SpendWiseServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = checkSession(request);
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		switch (request.getParameter("myAction")) {
 		case ("login"):
 			String username = request.getParameter("username");
