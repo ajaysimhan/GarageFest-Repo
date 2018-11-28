@@ -3,9 +3,11 @@ package com.edu;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import categoriesAPI.TransactionCategory;
 import categoriesAPI.TransactionType;
+import transactionAPI.TransactionDTO;
 import transactionAPI.TransactionDetails;
 
 public class ClassifierMain {
@@ -19,10 +21,10 @@ public class ClassifierMain {
 		
 		Classifier classifier = new Classifier();
 		classifier.load(transactionDetails.getDtos(), transactionCategory);
-		System.out.println(classifier.wasteTotal);
-		System.out.println(classifier.usefulTotal);
 		
-		System.out.println("test comment");
+		//<categoryId,>
+		HashMap<Integer, ArrayList<TransactionDTO>> map;
+		
 		
 	}
 }
