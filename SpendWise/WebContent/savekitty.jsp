@@ -262,7 +262,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username"><%=session.getAttribute("username") %></span>
+                            <span class="username">Emma Watson</span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -320,13 +320,13 @@
                           <span>Spending</span>
                       </a>
           </li>
-          <li class="active">
+          <li>
             <a class="" href="products.html">
                           <i class="icon_desktop"></i>
                           <span>Products</span>
                       </a>
           </li>
-          <li>
+          <li class="active">
             <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
@@ -344,10 +344,10 @@
     <section class="wrapper">
     <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header"><i class="icon_desktop"></i>Products</h3>
+              <h3 class="page-header"><i class="icon_genius"></i>Save Kitty</h3>
               <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="icon_desktop"></i>Products</li>
+                <li><i class="icon_genius"></i>Save Kitty</li>
 
               </ol>
             </div>
@@ -356,23 +356,18 @@
         <div class="col-md-12 portlets">
         <section class="panel">
               <header class="panel-heading">
-               Spend Wisely!!!!
+               Save while spending
               </header>
               <div class="panel-body">
                 <div class="panel panel-primary">
-                  <div class="panel-heading">Here are a few products to invest in..</div>                  
+                  <div class="panel-heading">Savekitty Details</div>
+                  <div>Balance:</div>
+                  
+                  <c:
+                  <div><img src="img/kitty/sadkitty.gif" alt="kitty not found" width="250" height="250">  </div>
+                   
+                  <div> hai kitty</div>
                 </div>  
-                
-                <div>
-                
-                Product 1..
-                
-                product 2..
-                
-                product 3..
-                
-                
-                </div>
                 
                             
               </div>
