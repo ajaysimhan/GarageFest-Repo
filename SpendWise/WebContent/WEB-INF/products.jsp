@@ -56,18 +56,6 @@
       <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
       <!--logo end-->
 
-      <div class="nav search-row" id="top_menu">
-        <!--  search form start -->
-        <ul class="nav top-menu">
-          <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
-            </form>
-          </li>
-        </ul>
-        <!--  search form end -->
-      </div>
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -314,7 +302,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
+          <li>
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
                           <span>Home</span>
@@ -322,74 +310,28 @@
           </li>
           <li>
             <a class="" href="accounts.html">
-                          <i class="icon_house_alt"></i>
+                          <i class="icon_documents_alt"></i>
                           <span>Accounts</span>
                       </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
           <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
+            <a class="" href="reports.html">
                           <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
+                          <span>Spending</span>
                       </a>
-
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+          <li class="active">
+            <a class="" href="products.html">
+                          <i class="icon_desktop"></i>
+                          <span>Products</span>
                       </a>
-            <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
-            </ul>
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+          <li>
+            <a class="" href="savekitty.html">
+                          <i class="icon_genius"></i>
+                          <span>Save Kitty</span>
                       </a>
-            <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
-            </ul>
           </li>
-
         </ul>
         <!-- sidebar menu end-->
       </div>
@@ -397,50 +339,47 @@
     <!--sidebar end-->
 
     <!--main content start-->
+    
     <section id="main-content">
-      <section class="wrapper">
-        <!--overview start-->
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i> Home</h3>
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-            </ol>
-          </div>
-        </div>
+    <section class="wrapper">
+    <div class="row">
+            <div class="col-lg-12">
+              <h3 class="page-header"><i class="icon_desktop"></i>Products</h3>
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                <li><i class="icon_desktop"></i>Products</li>
 
-        <div class="row">
-        <form action="accounts.html">
-          <div class="col-md-12 portlets">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h2><strong>Overview</strong></h2>
-              </div>
-              <div class="panel-body">
-                Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
-              </br></br></br>
-              <div class="col-lg-offset-8 col-lg-9">
-              <button type="submit" class="btn btn-primary">Get Started</button>                          
-              </div>                        
-              </div>
+              </ol>
             </div>
-          </div>
-          </form>
-        </div>
-        <!-- project team & activity end -->
-
-      </section>
-      <div class="text-right">
-        <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
+          </div>   
+<div class="row">
+        <div class="col-md-12 portlets">
+        <section class="panel">
+              <header class="panel-heading">
+               Spend Wisely!!!!
+              </header>
+              <div class="panel-body">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Here are a few products to invest in..</div>                  
+                </div>  
+                
+                <div>
+                
+                Product 1..
+                
+                product 2..
+                
+                product 3..
+                
+                
+                </div>
+                
+                            
+              </div>
+            </section>
+            </div>
+        </div>  
+    </section>
     </section>
     <!--main content end-->
   </section>

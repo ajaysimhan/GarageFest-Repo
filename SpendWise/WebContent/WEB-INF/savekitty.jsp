@@ -310,86 +310,28 @@
           </li>
           <li>
             <a class="" href="accounts.html">
-                          <i class="icon_house_alt"></i>
+                          <i class="icon_documents_alt"></i>
                           <span>Accounts</span>
                       </a>
           </li>
           <li>
             <a class="" href="reports.html">
-                          <i class="icon_house_alt"></i>
-                          <span>Performance Charts</span>
+                          <i class="icon_piechart"></i>
+                          <span>Spending</span>
                       </a>
           </li>
-          <li class="active">
-            <a class="" href="portfolios.html">
-                          <i class="icon_house_alt"></i>
+          <li>
+            <a class="" href="products.html">
+                          <i class="icon_desktop"></i>
                           <span>Products</span>
                       </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="" href="widgets.html">
+          <li class="active">
+            <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
-                          <span>Widgets</span>
+                          <span>Save Kitty</span>
                       </a>
           </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
-                      </a>
-
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
-            </ul>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
-            </ul>
-          </li>
-
         </ul>
         <!-- sidebar menu end-->
       </div>
@@ -402,10 +344,10 @@
     <section class="wrapper">
     <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header"><i class="icon_piechart"></i>Products</h3>
+              <h3 class="page-header"><i class="icon_genius"></i>Save Kitty</h3>
               <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="icon_piechart"></i>Products</li>
+                <li><i class="icon_genius"></i>Save Kitty</li>
 
               </ol>
             </div>
@@ -414,11 +356,11 @@
         <div class="col-md-12 portlets">
         <section class="panel">
               <header class="panel-heading">
-               Spend Wisely!!!!
+               Save while spending
               </header>
               <div class="panel-body">
                 <div class="panel panel-primary">
-                  <div class="panel-heading">Here are a few products to invest in..</div>                  
+                  <div class="panel-heading">Savekitty Details</div>                  
                 </div>  
                 
                             

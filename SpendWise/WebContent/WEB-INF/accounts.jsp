@@ -56,17 +56,6 @@
       <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
       <!--logo end-->
 
-      <div class="nav search-row" id="top_menu">
-        <!--  search form start -->
-        <ul class="nav top-menu">
-          <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
-            </form>
-          </li>
-        </ul>
-        <!--  search form end -->
-      </div>
 
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
@@ -322,92 +311,49 @@
           </li>
           <li class="active">
             <a class="" href="accounts.html">
-                          <i class="icon_house_alt"></i>
+                          <i class="icon_documents_alt"></i>
                           <span>Accounts</span>
                       </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
-          </li>
           <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
+            <a class="" href="reports.html">
                           <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
+                          <span>Spending</span>
                       </a>
-
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+          <li>
+            <a class="" href="products.html">
+                          <i class="icon_desktop"></i>
+                          <span>Products</span>
                       </a>
-            <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
-            </ul>
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+          <li>
+            <a class="" href="savekitty.html">
+                          <i class="icon_genius"></i>
+                          <span>Save Kitty</span>
                       </a>
-            <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
-            </ul>
           </li>
-
         </ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
     <!--sidebar end-->
-
+    
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <!--overview start-->
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i> Accounts</h3>
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Accounts</a></li>
-            </ol>
+      
+      <div class="row">
+            <div class="col-lg-12">
+              <h3 class="page-header"><i class="icon_documents_alt"></i>Accounts</h3>
+              <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                <li><i class="icon_documents_alt"></i>Accounts</li>
+
+              </ol>
+            </div>
           </div>
-        </div>
+        <!--overview start-->
 
         <div class="row">
           <div class="col-md-12 portlets">
@@ -419,6 +365,7 @@
                   If planning your purchases in advance is a good idea, buying something on the spur of the moment is a terrible one. Follow these tips to avoid making shopping decisions for the wrong reasons:    
               </br></br></br>
               <div class="col-lg-offset-8 col-lg-9">
+              <input type="hidden" name="myAction" value="addAccounts">
               <button type="submit" class="btn btn-primary">Add Accounts</button>                          
               </div>                        
               </div>
@@ -433,27 +380,30 @@
                 Add an Account
               </header>
               <div class="panel-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Placeholder</label>
-                    <input type="text" class="form-control" placeholder="placeholder">
-                  </div>
-                  <div class="col-lg-offset-8 col-lg-9">
-                  <button type="submit" class="btn btn-primary">Add Account</button>
-                  </div>
-                </form>
-                <form role="form">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Placeholder</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="placeholder">
-                    </div>
-                  </div>
-                  </form>
+                  <form class="form-horizontal">
+                      <!-- Name -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Account Holder Name</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title">
+                        </div>
+                      </div>
+                      <!-- Account Number -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="content">Account Number</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title">
+                        </div>
+                      </div>
+                       <!-- Buttons -->
+                      <div class="form-group">
+                        <!-- Buttons -->
+                        <div class="col-lg-offset-8 col-lg-9">
+                          <button type="submit" class="btn btn-primary">Add Account</button>
+                          
+                        </div>
+                      </div>
+                    </form>
               </div>
             </section>
           </div>
@@ -483,7 +433,8 @@
                 <div class="panel panel-primary">
                   <div class="panel-heading">You have successfully added accounts</div>
                   <div class="panel-content">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
-               	<form action="reports.html">
+               	<form action="SpendWise">
+               	         <input type="hidden" name="myAction" value="analyseSpending">
               <button type="submit" class="btn btn-warning btn-block">Analyse my spending</button>                                      
           </form>
                 </div>              
@@ -492,21 +443,7 @@
             </div>
         </div>
            
-      </section>
-      <div class="text-right">
-        <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </section>
-    <!--main content end-->
-  </section>
+
   <!-- container section start -->
 
   <!-- javascripts -->
