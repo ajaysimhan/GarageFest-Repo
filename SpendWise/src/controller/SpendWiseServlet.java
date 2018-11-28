@@ -29,9 +29,8 @@ public class SpendWiseServlet extends HttpServlet {
 		HttpSession session = checkSession(request);
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-
 		switch (request.getParameter("myAction")) {
-		case ("logout"):
+		case "logout":
 			HttpSession session1 = request.getSession(false);
 			if (session1 != null) {
 				session1.invalidate();
@@ -39,37 +38,48 @@ public class SpendWiseServlet extends HttpServlet {
 				rd1.forward(request, response);
 			}
 			break;
-		case ("addAccounts"):
-			request.setAttribute("addAccount", "true");
+		case "addAccounts":
+			request.setAttribute("action", "addAccount");
 			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd2.forward(request, response);
 			break;
-		case ("addAnAccount"):
-			request.setAttribute("displayAccounts", "true");
-			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd5.forward(request, response);
-			break;
-		case ("analyseSpending"):
-			ArrayList<String> transactionList = new ArrayList<String>();
-			request.setAttribute("transactionList", transactionList);
-			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
+		case "addAnAccount":
+			String accountHolderName = request.getParameter("accountHolderName");
+			String accountNumber = request.getParameter("accountNumber");
+			request.setAttribute("action", "displayAccounts");
+			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd3.forward(request, response);
 			break;
-		case ("suggestPortfolio"):
+		case "analyseSpending":
+			ArrayList<String> transactionList = new ArrayList<String>();
+			request.setAttribute("transactionList", transactionList);
+			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
+			rd4.forward(request, response);
+			break;
+		case "suggestPortfolio":
 			// read deatils
 			// algorithm
 			// portfolio display
-			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.jsp");
-			rd4.forward(request, response);
+			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
+			rd5.forward(request, response);
+			break;
+		case "saveKitty":
+			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/saveKitty.jsp");
+			rd6.forward(request, response);
 			break;
 		}
+
 		out.flush();
 		out.close();
+
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = checkSession(request);
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		switch (request.getParameter("myAction")) {
 		case ("login"):
 			String username = request.getParameter("username");
