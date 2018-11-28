@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import accounts.Account;
+import accounts.AccountDTO;
+import model.BasicInfoModel;
 import model.LoginModel;
 
 /**
@@ -29,7 +32,7 @@ public class SpendWiseServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		switch (request.getParameter("myAction")) {
-		case ("logout"):
+		case "logout":
 			HttpSession session1 = request.getSession(false);
 			if (session1 != null) {
 				session1.invalidate();
@@ -37,48 +40,42 @@ public class SpendWiseServlet extends HttpServlet {
 				rd1.forward(request, response);
 			}
 			break;
-		case ("getStarted"):
-			request.setAttribute("action", "");
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd1.forward(request, response);
-			break;
-		case ("addAccounts"):
+		case "addAccounts":
 			request.setAttribute("action", "addAccount");
 			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd2.forward(request, response);
 			break;
-		case ("addAnAccount"):
+		case "addAnAccount":
+			int accountNumber = Integer.parseInt(request.getParameter("accountNumber"));
+			AccountDTO account = Account.getAccount(accountNumber);
 			request.setAttribute("action", "displayAccounts");
-			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd5.forward(request, response);
-			break;
-		case ("analyseSpending"):
-			ArrayList<String> transactionList = new ArrayList<String>();
-			request.setAttribute("transactionList", transactionList);
-			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
+			request.setAttribute("account", account);
+			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd3.forward(request, response);
 			break;
-		case ("suggestPortfolio"):
-			// read deatils
-			// algorithm
-			// portfolio display
-			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.jsp");
+		case "analyseSpending":
+			ArrayList<String> transactionList = new ArrayList<String>();
+			request.setAttribute("transactionList", transactionList);
+			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd4.forward(request, response);
 			break;
-            case ("home"):
-                request.setAttribute("action", "");
-                RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/index.jsp");
-                rd6.forward(request, response);
-                break;
-
-            case ("savekitty"):
-                request.setAttribute("action", "");
-                RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
+		case "suggestPortfolio":
+			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
+			rd5.forward(request, response);
+			break;
+		case "saveKitty":
+                RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
+			rd6.forward(request, response);
+			break;
+            case "home":
+                RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
                 rd7.forward(request, response);
                 break;
 		}
+
 		out.flush();
 		out.close();
+
 	}
 
 	@Override
@@ -101,6 +98,17 @@ public class SpendWiseServlet extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 				rd.forward(request, response);
 			}
+			break;
+		case ("getStarted"):
+			try {
+				BasicInfoModel basicInfo = new BasicInfoModel(request);
+				basicInfo.saveBasicInfo();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			request.setAttribute("action", "");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd1.forward(request, response);
 			break;
 		}
 	}
