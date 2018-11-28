@@ -375,6 +375,7 @@
           </div>
         </div>
         
+
         <%if (request.getAttribute("action").equals("addAccount")){ %>
         <div class="row">
         <div class="col-lg-10">
