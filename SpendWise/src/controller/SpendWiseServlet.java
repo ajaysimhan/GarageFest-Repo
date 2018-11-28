@@ -64,9 +64,13 @@ public class SpendWiseServlet extends HttpServlet {
 			rd5.forward(request, response);
 			break;
 		case "saveKitty":
-			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/saveKitty.jsp");
+                RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
 			rd6.forward(request, response);
 			break;
+            case "home":
+                RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
+                rd7.forward(request, response);
+                break;
 		}
 
 		out.flush();
