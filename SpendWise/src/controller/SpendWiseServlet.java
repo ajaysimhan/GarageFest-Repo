@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -12,16 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.edu.ClassifierMain;
-
-import categoriesAPI.TransactionType;
 import accounts.Account;
 import accounts.AccountDTO;
 import model.BasicInfoModel;
 import model.LoginModel;
 import model.ReportsModel;
-import products.ProductManager;
-import model.SaveKittyModel;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -70,7 +64,7 @@ public class SpendWiseServlet extends HttpServlet {
 			rd4.forward(request, response);
 			break;
 		case "suggestPortfolio":
-			ProductManager productManager = new ProductManager(request);
+			//ProductManager productManager = new ProductManager(request);
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd5.forward(request, response);
 			break;
