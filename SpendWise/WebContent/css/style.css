@@ -738,6 +738,31 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 
 }
 
+ul.sidebar-menu li.active a button, ul.sidebar-menu li a button:hover, ul.sidebar-menu li a button:focus {
+	border-style: none !important;
+    background: #2e3b46;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a button {
+	border-style: none !important;
+	color: #d0d8df; 
+	background:#394a59;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+}
+
 ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
 
     border-bottom: 1px solid #d0d8df;
@@ -9903,3 +9928,4 @@ span.customSelect.changed {
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
 }
+

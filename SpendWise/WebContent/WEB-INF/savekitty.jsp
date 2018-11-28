@@ -40,6 +40,26 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <style>
+  .balance{
+  font-size:35px; 
+  color: #000000; 
+  float: right;
+ 	 position: relative;
+    width: 500px;
+    height: 200px;
+   top:80px;
+  }
+  .kitty{
+   position: relative;
+   left:20%;
+  }
+  .kittytext{
+   font-size:20px; 
+    position: relative;
+  	left:5%;
+  }
+  </style>
 </head>
 
 <body>
@@ -326,7 +346,7 @@
                           <span>Products</span>
                       </a>
           </li>
-          <li class="active">
+          <li class="">
             <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
@@ -360,7 +380,25 @@
               </header>
               <div class="panel-body">
                 <div class="panel panel-primary">
-                  <div class="panel-heading">Savekitty Details</div>                  
+                  <div class="panel-heading">Savekitty Details</div> 
+                  <div class="balance">Balance<br>
+                  <span  <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
+                  style="color: green;"
+                  <%}else{%>
+                  style="color: red;"
+                  <%} %>
+                  >$5000</span>
+                  </div>
+                  <div class="kitty">
+                <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
+         <img src="img/kitty/happykitty.gif" alt="kitty not found" width="350" height="350">
+         <div class="kittytext" style="color:#009900">Your account has enough balance which will be transferred at the end of the month</div> 
+		<%}else{%>
+                   <img src="img/kitty/sadkitty.gif" alt="kitty not found" width="300" height="300">
+                    <div class="kittytext" style="color:#ff0000"> Your balance is low!!!</div> 
+                   <%} %>
+                   </div>
+                                  
                 </div>  
                 
                             
