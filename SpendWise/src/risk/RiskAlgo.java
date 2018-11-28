@@ -1,7 +1,14 @@
 package risk;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import org.apache.commons.io.FileUtils;
+
 import products.ProductDTO;
+import suggestion.SuggestionDTO;
+import transactionAPI.TransactionDetails;
 
 public class RiskAlgo
 {
@@ -14,6 +21,8 @@ public class RiskAlgo
         double debt=0;
         double debtInterestRate=0;
         double monthlyExpense=0;
+        
+        double accNo=267354811;
         
         final double LOGCONSTANT= Math.log(24);
         double inflationRate=2;
@@ -33,6 +42,8 @@ public class RiskAlgo
         System.out.println("Enter your monthly expense.");
         monthlyExpense = dd.nextDouble();
         
+        
+        
         double incomeHealth = getIncomeHealth(annualIncome, LOGCONSTANT);
         double netWorthHealth = getNetworthHealth(netWorth);
         double debtHealth = getDebtHealth(annualIncome,debt,debtInterestRate,inflationRate);
@@ -43,10 +54,21 @@ public class RiskAlgo
         System.out.println(financialRisk);
         
        ArrayList <ProductDTO> pr = getProductsforRisk(financialRisk);
+       
+       double wasteAmount = getWasteAmount(accNo);
+       double savingsPermonth = getSavingsPermonth(accNo);
+       
+       double monthlyIncome=annualIncome/12;
+       SuggestionDTO sug = getSavingSuggestionsAndInvestibleAmount(monthlyIncome, monthlyExpense, wasteAmount, savingsPermonth);
+       
+       
        System.out.println(pr.toString());
     }
 
    
+
+
+
 
 	private static double getIncomeHealth(double annualIncome, double LOGCONSTANT)
     {
@@ -247,6 +269,40 @@ public class RiskAlgo
 		}
 			
 		return productArray;
+	}
+
+    
+	private static SuggestionDTO getSavingSuggestionsAndInvestibleAmount(double monthlyIncome, double monthlyExpense,
+			double wasteAmount, double savingsPerMonth) {
+		SuggestionDTO suggestion= new SuggestionDTO();
+		if(savingsPerMonth>=0.5*monthlyIncome) {
+			suggestion.setComment("Kudos, You are an aggresssive saver. Keep going.");
+		}else if(savingsPerMonth>=0.3*monthlyIncome) {
+			if(wasteAmount>=0.5*monthlyExpense) {
+				suggestion.setComment("You are saving good amount. But you can still fine tune your spending pattern");
+			}else {
+				suggestion.setComment("You are saving good amount.");
+			}
+		}else if(savingsPerMonth>=0.2*monthlyIncome) {
+			suggestion.setComment("You are saving just enough amount. Try to increase your savings");
+		}else if(savingsPerMonth>=0.1*monthlyIncome) {
+			if(wasteAmount>=0.3*monthlyExpense) {
+				suggestion.setComment("You are not saving enough. Try to cut down your expenses");
+		}else {
+			suggestion.setComment("You are not saving enough");
+			}
+		}else {
+				suggestion.setComment("You are not saving enough. Your spending doesn't look good");
+			}
+			
+			if(savingsPerMonth>=0.2*monthlyIncome) {
+				suggestion.setInvestibleAmount(savingsPerMonth);
+			}else {
+				if(wasteAmount>=0.3*monthlyIncome)
+				suggestion.setInvestibleAmount(savingsPerMonth + wasteAmount/2);
+			}
+		
+		return suggestion;
 	}
 
 }
