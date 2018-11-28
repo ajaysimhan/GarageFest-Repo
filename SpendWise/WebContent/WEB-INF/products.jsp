@@ -53,7 +53,11 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
+      <a class="logo"> <form action="SpendWise">
+            <i class="icon_house_alt"></i>
+            <input type="hidden" name="myAction" value="home">
+            <button type="submit">Spend <span class="lite">Wise</button>   
+         </form></span></a>
       <!--logo end-->
 
       <div class="top-nav notification-row">
@@ -262,7 +266,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Emma Watson</span>
+                            <span class="username"><%=session.getAttribute("username") %></span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -302,37 +306,52 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li>
-            <a class="" href="index.html">
-                          <i class="icon_house_alt"></i>
-                          <span>Home</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="accounts.html">
-                          <i class="icon_documents_alt"></i>
-                          <span>Accounts</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="reports.html">
-                          <i class="icon_piechart"></i>
-                          <span>Spending</span>
-                      </a>
-          </li>
-          <li class="active">
-            <a class="" href="products.html">
-                          <i class="icon_desktop"></i>
-                          <span>Products</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="savekitty.html">
-                          <i class="icon_genius"></i>
-                          <span>Save Kitty</span>
-                      </a>
-          </li>
-        </ul>
+   <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_house_alt"></i>
+            <input type="hidden" name="myAction" value="home">
+            <button type="submit">Home</button>   
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_house_alt"></i>
+            <input type="hidden" name="myAction" value="addAccounts">
+            <button type="submit">Accounts</button>   
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_piechart"></i>
+            <input type="hidden" name="myAction" value="analyseSpending">
+            <button type="submit">Spending</button>   
+         </form>
+      </a>
+   </li>
+   <li class="active">
+      <a>
+         <form action="SpendWise">
+            <i class="icon_desktop"></i>
+            <input type="hidden" name="myAction" value="suggestPortfolio">
+            <button type="submit">Products</button>
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_genius"></i>
+            <input type="hidden" name="myAction" value="saveKitty">
+            <button type="submit">Save Kitty</button>
+         </form>
+      </a>
+   </li>
+</ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
@@ -346,7 +365,12 @@
             <div class="col-lg-12">
               <h3 class="page-header"><i class="icon_desktop"></i>Products</h3>
               <ol class="breadcrumb">
-                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                <li><i class="fa fa-home"></i><a>
+                 <form action="SpendWise">
+            <i class="icon_house_alt"></i>
+            <input type="hidden" name="myAction" value="home">
+            <button type="submit">Home</button>   
+         </form></a></li>
                 <li><i class="icon_desktop"></i>Products</li>
 
               </ol>
@@ -370,6 +394,12 @@
                 product 2..
                 
                 product 3..
+                
+                
+  				<form action="SpendWise">
+                 <input type="hidden" name="myAction" value="saveKitty">
+                 <button type="submit" class="btn btn-warning btn-block">See Your Kitty</button>
+                </form>
                 
                 
                 </div>

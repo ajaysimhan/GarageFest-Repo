@@ -49,12 +49,12 @@
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_profile"></i></span>
 					<input type="text" class="form-control" name=username
-						placeholder="Username" autofocus>
+						placeholder="Username" autofocus required>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_key_alt"></i></span>
 					<input type="password" class="form-control" name=password
-						placeholder="Password">
+						placeholder="Password" required>
 				</div>
 				<label class="checkbox"> <input type="checkbox"
 					value="remember-me"> Remember me <span class="pull-right">

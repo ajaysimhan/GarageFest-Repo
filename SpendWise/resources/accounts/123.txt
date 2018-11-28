@@ -1,5 +1,5 @@
 {
- "account": [{
+ "accounts": [{
   "CONTAINER": "bank",
   "providerAccountId": 10906157,
   "accountName": "BankAccount3",
