@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="accounts.AccountDTO"%>
 <html lang="en">
 
 <head>
@@ -322,15 +323,6 @@
 							<header class="panel-heading"> Add an Account </header>
 							<div class="panel-body">
 								<form class="form-horizontal" action="SpendWise">
-									<!-- Name -->
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="title">Account
-											Holder Name</label>
-										<div class="col-lg-10">
-											<input type="text" class="form-control" id="title"
-												name="accountHolderName">
-										</div>
-									</div>
 									<!-- Account Number -->
 									<div class="form-group">
 										<label class="control-label col-lg-2" for="content">Account
@@ -373,7 +365,7 @@
 							</div>
 							<div class="panel-body">
 								<form class="form-horizontal">
-									Account account = (Account) request.getAttribute("account");
+									<% AccountDTO account = (AccountDTO) request.getAttribute("account");%>
 									<!-- Name -->
 									<div class="form-group">
 										<label class="control-label col-lg-2" for="title">Account
@@ -398,13 +390,13 @@
 										</label>
 										<div class="col-lg-10">
 											<input type="text" class="form-control" id="title"
-												value="${account.getBalance()}" readonly>
+												value="${account.getBalance().getAmount()} ${account.getBalance().getCurrency()}" readonly>
 										</div>
 									</div>
-							</form>
+								</form>
+							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 
 				<div class="row">

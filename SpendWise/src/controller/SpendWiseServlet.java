@@ -46,7 +46,6 @@ public class SpendWiseServlet extends HttpServlet {
 			rd2.forward(request, response);
 			break;
 		case "addAnAccount":
-			String accountHolderName = request.getParameter("accountHolderName");
 			int accountNumber = Integer.parseInt(request.getParameter("accountNumber"));
 			AccountDTO account = Account.getAccount(accountNumber);
 			request.setAttribute("action", "displayAccounts");
@@ -61,9 +60,6 @@ public class SpendWiseServlet extends HttpServlet {
 			rd4.forward(request, response);
 			break;
 		case "suggestPortfolio":
-			// read deatils
-			// algorithm
-			// portfolio display
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd5.forward(request, response);
 			break;
