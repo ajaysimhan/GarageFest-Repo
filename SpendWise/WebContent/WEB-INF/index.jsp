@@ -358,7 +358,7 @@
         </div>
 
         <div class="row">
-        <form action="SpendWise">
+        <form action="SpendWise" method="post">
           <div class="col-md-12 portlets">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -367,8 +367,42 @@
               <div class="panel-body">
                 Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
               </br></br></br>
-              More BLAH BLAH BLAH
+              Start by adding a few details about yourself and click on the get started button
               </br></br></br>
+              <form class="form-horizontal" method="post">
+                      <!-- Age -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Your Age</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title" name=age>
+                        </div>
+                      </div>
+                      <!-- Annual Income -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="content">Your Annual Income</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title" name=annualIncome>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Your Net Worth</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title" name=netWorth>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">The Total Debt you have</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title" name=totaldebt>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Interest rate of debt</label>
+                        <div class="col-lg-10">
+                          <input type="text" class="form-control" id="title" name=debtInterestRate>
+                        </div>
+                      </div>
+                    </form>
               <div class="col-lg-offset-8 col-lg-9">
               <input type="hidden" name="myAction" value="getStarted">
               <button type="submit" class="btn btn-primary">Get Started</button>                          
