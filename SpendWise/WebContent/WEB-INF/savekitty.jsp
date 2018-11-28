@@ -56,7 +56,6 @@
       <a href="index.html" class="logo">Spend <span class="lite">Wise</span></a>
       <!--logo end-->
 
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -309,7 +308,7 @@
                           <span>Home</span>
                       </a>
           </li>
-          <li class="active">
+          <li>
             <a class="" href="accounts.html">
                           <i class="icon_documents_alt"></i>
                           <span>Accounts</span>
@@ -327,7 +326,7 @@
                           <span>Products</span>
                       </a>
           </li>
-          <li>
+          <li class="active">
             <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
@@ -338,118 +337,41 @@
       </div>
     </aside>
     <!--sidebar end-->
-    
+
     <!--main content start-->
+    
     <section id="main-content">
-      <section class="wrapper">
-      
-      <div class="row">
+    <section class="wrapper">
+    <div class="row">
             <div class="col-lg-12">
-              <h3 class="page-header"><i class="icon_documents_alt"></i>Accounts</h3>
+              <h3 class="page-header"><i class="icon_genius"></i>Save Kitty</h3>
               <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="icon_documents_alt"></i>Accounts</li>
+                <li><i class="icon_genius"></i>Save Kitty</li>
 
               </ol>
             </div>
-          </div>
-        <!--overview start-->
-
-        <div class="row">
-          <div class="col-md-12 portlets">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h2><strong>Overview</strong></h2>
-              </div>
-              <div class="panel-body">
-                  If planning your purchases in advance is a good idea, buying something on the spur of the moment is a terrible one. Follow these tips to avoid making shopping decisions for the wrong reasons:    
-              </br></br></br>
-              <form action="SpendWise">
-              <div class="col-lg-offset-8 col-lg-9">
-              <input type="hidden" name="myAction" value="addAccounts">
-              <button type="submit" class="btn btn-primary">Add Accounts</button>                          
-              </div>           
-              </form>             
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <%if (request.getAttribute("action").equals("addAccount")){ %>
-        <div class="row">
-        <div class="col-lg-10">
-            <section class="panel">
-              <header class="panel-heading">
-                Add an Account
-              </header>
-              <div class="panel-body">
-                  <form class="form-horizontal" action="SpendWise">
-                      <!-- Name -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">Account Holder Name</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name="accountHolderName">
-                        </div>
-                      </div>
-                      <!-- Account Number -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="content">Account Number</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name="accountNumber">
-                        </div>
-                      </div>
-                       <!-- Buttons -->
-                      <div class="form-group">
-                        <!-- Buttons -->
-                        <div class="col-lg-offset-8 col-lg-9">
-					<input type="hidden" name="myAction" value="addAnAccount">
-                          <button type="submit" class="btn btn-primary">Add Account</button>
-                          
-                        </div>
-                      </div>
-                    </form>
-              </div>
-            </section>
-          </div>
-        </div>
-	<%} %>
-	
-        <!-- project team & activity end -->
-	<%if (request.getAttribute("action").equals("displayAccounts")){ %>     
-        <div class="row">
-          <div class="col-md-12 portlets">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h2><strong>Your Accounts</strong></h2>
-              </div>
-              <div class="panel-body">
-                  hvgcccgcg                   
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
+          </div>   
+<div class="row">
         <div class="col-md-12 portlets">
         <section class="panel">
               <header class="panel-heading">
-                Congratulations!!!!
+               Save while spending
               </header>
               <div class="panel-body">
                 <div class="panel panel-primary">
-                  <div class="panel-heading">You have successfully added accounts</div>
-                  <div class="panel-content">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
-               	<form action="SpendWise">
-               	         <input type="hidden" name="myAction" value="analyseSpending">
-              <button type="submit" class="btn btn-warning btn-block">Analyse my spending</button>                                      
-          </form>
-                </div>              
+                  <div class="panel-heading">Savekitty Details</div>                  
+                </div>  
+                
+                            
               </div>
             </section>
             </div>
-        </div>
-       	<%} %>    
-
+        </div>  
+    </section>
+    </section>
+    <!--main content end-->
+  </section>
   <!-- container section start -->
 
   <!-- javascripts -->
@@ -468,7 +390,7 @@
   <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
   <script src="js/owl.carousel.js"></script>
   <!-- jQuery full calendar -->
-  <script src="js/fullcalendar.min.js"></script>
+  <<script src="js/fullcalendar.min.js"></script>
     <!-- Full Google Calendar - Calendar -->
     <script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
     <!--script for this page only-->
