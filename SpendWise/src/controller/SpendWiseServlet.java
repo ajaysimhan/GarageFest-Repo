@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.edu.ClassifierMain;
+
+import categoriesAPI.TransactionType;
 import model.LoginModel;
+import model.ReportsModel;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -53,8 +58,11 @@ public class SpendWiseServlet extends HttpServlet {
 			rd5.forward(request, response);
 			break;
 		case ("analyseSpending"):
-			ArrayList<String> transactionList = new ArrayList<String>();
-			request.setAttribute("transactionList", transactionList);
+		    HashMap<String, Integer> transactionTypes = null;
+		    ReportsModel rm = new ReportsModel();
+		    rm.buildWasteTransactionList(transactionTypes);
+		    request.setAttribute("categoryList", rm.getCategories());
+		    request.setAttribute("expenseList", rm.getExpenses());
 			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd3.forward(request, response);
 			break;
