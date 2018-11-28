@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.BasicInfoModel;
 import model.LoginModel;
 
 /**
@@ -37,10 +38,6 @@ public class SpendWiseServlet extends HttpServlet {
 				RequestDispatcher rd1 = request.getRequestDispatcher("login.jsp");
 				rd1.forward(request, response);
 			}
-			break;
-		case ("getStarted"):
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
-			rd1.forward(request, response);
 			break;
 		case ("addAccounts"):
 			request.setAttribute("addAccount", "true");
@@ -87,6 +84,16 @@ public class SpendWiseServlet extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 				rd.forward(request, response);
 			}
+			break;
+		case ("getStarted"):
+			try {
+				BasicInfoModel basicInfo = new BasicInfoModel(request);
+				basicInfo.saveBasicInfo();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd1.forward(request, response);
 			break;
 		}
 	}
