@@ -15,6 +15,7 @@ import dao.BasicInfoDTO;
 public class BasicInfoModel {
 	
 	public static final String FILE_PATH = BasicInfoModel.class.getProtectionDomain().getCodeSource().getLocation().getFile() ;
+	public static final String BASICINFO_FILE_PATH = FILE_PATH + "/resources/basicinfo/basicinfo.txt";
 	
 	private BasicInfoDTO basicInfoDTO = null;
 	
@@ -31,13 +32,13 @@ public class BasicInfoModel {
 	public void saveBasicInfo() throws Exception {
 		
 		String basicInfoJson = new Gson().toJson(basicInfoDTO);
-		File file = new File(FILE_PATH + "/resources/transactions123.txt");
+		File file = new File(BASICINFO_FILE_PATH);
 		FileUtils.writeStringToFile(file, basicInfoJson);  
 	}
 	
 	public BasicInfoDTO getBasicInfo() throws Exception {
 		
-		String basicInfoJson = FileUtils.readFileToString(new File(FILE_PATH));
+		String basicInfoJson = FileUtils.readFileToString(new File(BASICINFO_FILE_PATH));
 		BasicInfoDTO basicInfoDAO = (BasicInfoDTO) new Gson().fromJson(basicInfoJson, BasicInfoDTO.class);
 		return basicInfoDAO;
 	}
