@@ -388,14 +388,14 @@
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Account Holder Name</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title">
+                          <input type="text" class="form-control" id="title" name="accountHolderName">
                         </div>
                       </div>
                       <!-- Account Number -->
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="content">Account Number</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title">
+                          <input type="text" class="form-control" id="title" name="accountNumber">
                         </div>
                       </div>
                        <!-- Buttons -->
