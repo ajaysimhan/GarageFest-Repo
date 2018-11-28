@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import accounts.Account;
+import accounts.AccountDTO;
 import model.BasicInfoModel;
 import model.LoginModel;
 
@@ -44,9 +46,10 @@ public class SpendWiseServlet extends HttpServlet {
 			rd2.forward(request, response);
 			break;
 		case "addAnAccount":
-			String accountHolderName = request.getParameter("accountHolderName");
-			String accountNumber = request.getParameter("accountNumber");
+			int accountNumber = Integer.parseInt(request.getParameter("accountNumber"));
+			AccountDTO account = Account.getAccount(accountNumber);
 			request.setAttribute("action", "displayAccounts");
+			request.setAttribute("account", account);
 			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd3.forward(request, response);
 			break;
@@ -57,9 +60,6 @@ public class SpendWiseServlet extends HttpServlet {
 			rd4.forward(request, response);
 			break;
 		case "suggestPortfolio":
-			// read deatils
-			// algorithm
-			// portfolio display
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd5.forward(request, response);
 			break;
@@ -102,6 +102,7 @@ public class SpendWiseServlet extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			request.setAttribute("action", "");
 			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd1.forward(request, response);
 			break;
