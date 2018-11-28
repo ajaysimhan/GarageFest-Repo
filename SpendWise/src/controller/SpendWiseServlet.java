@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.LoginModel;
+import model.SaveKittyModel;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -68,7 +69,10 @@ public class SpendWiseServlet extends HttpServlet {
 			rd5.forward(request, response);
 			break;
 		case "saveKitty":
-			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/saveKitty.jsp");
+			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
+			SaveKittyModel kittyModel = new SaveKittyModel();
+			boolean kittymood = kittyModel.getKittyMood();
+			request.setAttribute("kittymood",kittymood);
 			rd6.forward(request, response);
 			break;
 		}

@@ -371,7 +371,10 @@
                 
                 product 3..
                 
-                
+                <form action="SpendWise">
+                 <input type="hidden" name="myAction" value="saveKitty">
+                 <button type="submit" class="btn btn-warning btn-block">See Your Kitty</button>
+                </form>
                 </div>
                 
                             
