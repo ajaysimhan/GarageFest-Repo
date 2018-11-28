@@ -35,11 +35,11 @@ public class SpendWiseServlet extends HttpServlet {
 			LoginModel lm = new LoginModel();
 			boolean isValidUser = lm.validateUser(username, password);
 			if (isValidUser) {
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/index.html");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/index.jsp");
 				rd.forward(request, response);
 			} else {
 				request.setAttribute("error", "Invalid Credentials");
-				RequestDispatcher rd = request.getRequestDispatcher("login.html");
+				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 				rd.forward(request, response);
 			}
 			break;
@@ -47,24 +47,24 @@ public class SpendWiseServlet extends HttpServlet {
 			HttpSession session1 = request.getSession(false);
 			if (session1 != null) {
 				session1.invalidate();
-				RequestDispatcher rd1 = request.getRequestDispatcher("login.html");
+				RequestDispatcher rd1 = request.getRequestDispatcher("login.jsp");
 				rd1.forward(request, response);
 			}
 			break;
 		case ("getStarted"):
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.html");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd1.forward(request, response);
 			break;
 		case ("addAccounts"):
-			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.html");
+			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
 			rd2.forward(request, response);
 			break;
 		case ("analyseSpending"):
-			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.html");
+			RequestDispatcher rd3 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd3.forward(request, response);
 			break;
 		case ("suggestPortfolio"):
-			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.html");
+			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd4.forward(request, response);
 			break;
 		}
