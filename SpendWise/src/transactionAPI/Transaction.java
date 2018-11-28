@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Transaction {
-	public static HashMap<Integer, ArrayList<TransactionDTO>> getCategoriesedMap(int accNo) {
+	public static HashMap<Integer, ArrayList<TransactionDTO>> getCategories(int accNo) {
 		HashMap<Integer, ArrayList<TransactionDTO>> map = new HashMap<>();
 		TransactionDetails td = TransactionDetails.getTransactionDetails(accNo);
 		ArrayList<TransactionDTO> dtos = td.getDtos();
