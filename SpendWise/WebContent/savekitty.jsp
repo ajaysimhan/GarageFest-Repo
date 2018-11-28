@@ -360,7 +360,13 @@
               </header>
               <div class="panel-body">
                 <div class="panel panel-primary">
-                  <div class="panel-heading">Savekitty Details</div>                  
+                  <div class="panel-heading">Savekitty Details</div>
+                  <div>Balance:</div>
+                  
+                  <c:
+                  <div><img src="img/kitty/sadkitty.gif" alt="kitty not found" width="250" height="250">  </div>
+                   
+                  <div> hai kitty</div>
                 </div>  
                 
                             
