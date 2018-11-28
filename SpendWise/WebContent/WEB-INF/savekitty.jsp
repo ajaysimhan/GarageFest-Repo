@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,7 +346,7 @@
                           <span>Products</span>
                       </a>
           </li>
-          <li class="active">
+          <li class="">
             <a class="" href="savekitty.html">
                           <i class="icon_genius"></i>
                           <span>Save Kitty</span>
@@ -995,4 +994,4 @@
 </body>
 
 </html>
->>>>>>> branch 'master' of https://github.com/ajaysimhan/GarageFest-Repo.git
+
