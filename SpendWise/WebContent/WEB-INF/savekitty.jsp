@@ -57,7 +57,7 @@
   .kittytext{
    font-size:20px; 
     position: relative;
-  	left:5%;
+  	left:2%;
   }
   </style>
 </head>
@@ -417,10 +417,10 @@
                 <div class="panel panel-primary">
                   <div class="panel-heading">Savekitty Details</div>                  
                   <div class="balance">
-                 <span style="font-size:18; color:  #00cc00 "> You have successfully started your savings plan.</span><br><br> Now onwards, I will be deducing an amount (10 % Click here if you want to change it) 
-                  from each of your transactions and will be adding the same to my kitty.
-My kitty will be then used to fund the product you selected. You are all set for now!<br><br>
-I will be sending you notifications once I start my savings. Stay in Touch!<br>
+                 <span style="font-size:18; color:  #00cc00 "> You have successfully started your savings plan.</span><br><br> Now onwards I will be deducting an amount corresponding to the 10% of every transactions (If you want to change the percentage,<a> click here</a>) and will add to my kitty. 
+<br>
+Emergency funds and Debt repayment transactions are excluded. It will be then used to fund the product you selected.<br><br>
+You are all set for now!!
                   
                   </div>
                   <div class="kitty">
