@@ -225,7 +225,7 @@ public class RiskAlgo {
 			productArray.add(pr8);
 			ProductDTO pr9 = new ProductDTO();
 			pr9.setId(9);
-			pr9.setName("AR Yape Growth Portfolio™");
+			pr9.setName("AR Yape Growth Portfolio");
 			pr9.setFixedIncomeBonds(10);
 			pr9.setExchangeTradedFund(30);
 			pr9.setLargeCapStocks(30);
@@ -234,11 +234,11 @@ public class RiskAlgo {
 			productArray.add(pr9);
 			ProductDTO pr10 = new ProductDTO();
 			pr10.setId(10);
-			pr10.setName("CO Lgate® Balanced Fund");
+			pr10.setName("CO Lgate Balanced Fund");
 			pr10.setFixedIncomeBonds(25);
 			pr10.setLargeCapStocks(30);
 			pr10.setMidCapStocks(30);
-			pr10.setMidCapStocks(15);
+			pr10.setSmallAndMicroCapStocks(15);
 			productArray.add(pr10);
 		} else if (financialRisk < 95) {
 			ProductDTO pr11 = new ProductDTO();
@@ -252,7 +252,7 @@ public class RiskAlgo {
 			productArray.add(pr11);
 			ProductDTO pr12 = new ProductDTO();
 			pr12.setId(12);
-			pr12.setName("PRIMECAP Odyssey Aggressive Growth™");
+			pr12.setName("PRIMECAP Odyssey Aggressive Growth");
 			pr12.setFixedIncomeBonds(10);
 			pr12.setExchangeTradedFund(30);
 			pr12.setLargeCapStocks(30);
