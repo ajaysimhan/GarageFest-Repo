@@ -44,7 +44,7 @@
     <style>
   .overview{
    position: relative;
-  width: 850px;
+  width: 830px;
   height: 200px;
 
   }
@@ -64,7 +64,6 @@
   .yay{
   font-size: 15px;
   color: #00994d;
-;
   }
   </style>
   

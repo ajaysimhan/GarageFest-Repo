@@ -106,7 +106,7 @@
 position: relative;
 float: right;
 padding-top: 250px;
- 
+height: 500px;
 }
 .chart{
 
@@ -425,7 +425,7 @@ padding-top: 250px;
           		
                            <div class="row">
                                   <!-- Pie -->
-                                  <div class="col-lg-8">
+                                  <div class="col-lg-9">
                                          <header class="heading">
                                                 <b><font size="5">Expenditures</font></b>
                                          </header>
@@ -437,7 +437,7 @@ padding-top: 250px;
                                          
                                   </div>
                                        <div>         
-          		<img src="img/kitty/report.gif" class="reportkitty">
+          		<img src="img/kitty/report.gif" class="reportkitty" >
           		</div>
                                   
                            </div>
