@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%@page import="java.util.ArrayList"%>
 <%@page import="products.ProductDTO"%>
@@ -242,7 +243,7 @@
 							<li><a href="#"><i class="icon_clock_alt"></i> Timeline</a>
 							</li>
 							<li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-							<li><a href="login.html"><i class="icon_key_alt"></i>
+							<li><a href="login.jsp"><i class="icon_key_alt"></i>
 									Log Out</a></li>
 							<li><a href="documentation.html"><i class="icon_key_alt"></i>
 									Documentation</a></li>
@@ -328,7 +329,7 @@
 					<div class="col-md-12 portlets">
 						<section class="panel ">
 							<header class="panel-heading"> Risk Category :
-								Conservative// </header>
+								<%=request.getAttribute("riskCategory") %> </header>
 							<div class="panel-body ScrollStyle">
 								<div class="panel panel-primary">
 									<div class="panel-heading">Here are a few products to
@@ -340,15 +341,17 @@
 
 									<div class="tab-pane" id="chartjs">
 										<div class="row">
-<% ArrayList productList = (ArrayList)request.getAttribute("productList");%>
-											<c:forEach items="${productList}" var="product">
+											<c:forEach var="product" items="${requestScope.productList}" >
+											${product.getName()}
+											</c:forEach>
 												<!-- Line -->
 												<div class="col-lg-12">
 													<section class="panel">
 														<header class="panel-heading">
-															<INPUT TYPE="radio" NAME="productSelected"
-																VALUE="${product.getId()}%>" />
-															${product.getName()}
+															<%-- <INPUT TYPE="radio" NAME="productSelected"
+																VALUE="${product.getId()}" />
+															${product.getName()} --%>
+															
 														</header>
 														<div class="panel-body text-center">
 															<div id="${product.getId()}" class="col-lg-8">
@@ -362,7 +365,7 @@
 													</section>
 												</div>
 
-											</c:forEach>
+											
 
 
 											<form action="SpendWise">
