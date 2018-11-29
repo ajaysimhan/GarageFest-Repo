@@ -5,7 +5,7 @@ public class SaveKittyModel {
 
 	public boolean getKittyMood() {
 		SaveKittyDao sd = new SaveKittyDao();
-		return sd.isHappyKitty(10);
+		return sd.isHappyKitty(1000);
 	}
 
 }
