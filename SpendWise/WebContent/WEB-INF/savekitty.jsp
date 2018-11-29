@@ -352,6 +352,15 @@
          </form>
       </a>
    </li>
+      <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
    <li>
       <a>
          <form action="SpendWise">

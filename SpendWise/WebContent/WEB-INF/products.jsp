@@ -282,6 +282,15 @@
 								<button type="submit">Spending</button>
 							</form>
 					</a></li>
+					<li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
 					<li class="active"><a>
 							<form action="SpendWise">
 								<i class="icon_desktop"></i> <input type="hidden"
@@ -312,13 +321,15 @@
 							<i class="icon_desktop"></i>Products
 						</h3>
 						<ol class="breadcrumb">
-							<li><i class="fa fa-home"></i><a>
-									<form action="SpendWise">
-										<i class="icon_house_alt"></i> <input type="hidden"
-											name="myAction" value="home">
-										<button type="submit">Home</button>
-									</form>
-							</a></li>
+							<li>
+							<a>
+              <form action="SpendWise">
+            <i class="fa fa-home"></i></i>
+            <input type="hidden" name="myAction" value="home">
+            <button type="submit">Home</button>   
+         </form>
+         </a>
+							</li>
 							<li><i class="icon_desktop"></i>Products</li>
 
 						</ol>

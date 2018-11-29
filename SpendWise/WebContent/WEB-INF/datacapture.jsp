@@ -307,7 +307,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-   <li class="active">
+   <li>
       <a>
          <form action="SpendWise">
             <i class="icon_house_alt"></i>
@@ -331,6 +331,15 @@
             <i class="icon_piechart"></i>
             <input type="hidden" name="myAction" value="analyseSpending">
             <button type="submit">Spending</button>   
+         </form>
+      </a>
+   </li>
+   <li class="active">
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
          </form>
       </a>
    </li>
@@ -374,6 +383,7 @@
             <button type="submit">Home</button>   
          </form>
          </a></li>
+         <li><i class="icon_documents_alt"></i>User Info</li>
             </ol>
           </div>
         </div>
