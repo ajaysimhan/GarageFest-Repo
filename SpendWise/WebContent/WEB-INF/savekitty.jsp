@@ -352,7 +352,8 @@
          </form>
       </a>
    </li>
-      <li>
+   
+     <li>
       <a>
          <form action="SpendWise">
             <i class="icon_documents_alt"></i>
@@ -362,6 +363,7 @@
       </a>
    </li>
    <li>
+   
       <a>
          <form action="SpendWise">
             <i class="icon_desktop"></i>
