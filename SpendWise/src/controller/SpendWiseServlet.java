@@ -42,6 +42,11 @@ public class SpendWiseServlet extends HttpServlet {
 				rd1.forward(request, response);
 			}
 			break;
+		case ("getStarted"):
+			request.setAttribute("action", "");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd1.forward(request, response);
+			break;
 		case "addAccounts":
 			request.setAttribute("action", "addAccount");
 			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
@@ -56,11 +61,11 @@ public class SpendWiseServlet extends HttpServlet {
 			rd3.forward(request, response);
 			break;
 		case "analyseSpending":
-		    HashMap<String, Integer> transactionTypes = null;
-		    ReportsModel rm = new ReportsModel();
-		    rm.buildWasteTransactionList(transactionTypes);
-		    request.setAttribute("categoryList", rm.getCategories());
-		    request.setAttribute("expenseList", rm.getExpenses());
+			HashMap<String, Integer> transactionTypes = null;
+			ReportsModel rm = new ReportsModel();
+			rm.buildWasteTransactionList(transactionTypes);
+			request.setAttribute("categoryList", rm.getCategories());
+			request.setAttribute("expenseList", rm.getExpenses());
 			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd4.forward(request, response);
 			break;
@@ -68,23 +73,15 @@ public class SpendWiseServlet extends HttpServlet {
 			RequestDispatcher rd8 = request.getRequestDispatcher("/WEB-INF/datacapture.jsp");
 			rd8.forward(request, response);
 			break;
-		case "suggestPortfolio":
-			try {
-				ProductManager productManager = new ProductManager(request);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
-			rd5.forward(request, response);
-			break;
 		case "saveKitty":
-                RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
+			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
 			rd6.forward(request, response);
 			break;
-            case "home":
-                RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
-                rd7.forward(request, response);
-                break;
+		case "home":
+			RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
+			rd7.forward(request, response);
+			break;
+
 		}
 
 		out.flush();
@@ -113,15 +110,15 @@ public class SpendWiseServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 			break;
-		case ("getStarted"):
+		case ("suggestPortfolio"):
 			try {
 				BasicInfoModel basicInfo = new BasicInfoModel(request);
 				basicInfo.saveBasicInfo();
+				ProductManager productManager = new ProductManager(request);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			request.setAttribute("action", "");
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd1.forward(request, response);
 			break;
 		}
