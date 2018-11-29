@@ -24,7 +24,6 @@ public class ProductManager {
 	
 	private void initializeProducts() throws Exception {
 		
-		RiskAlgo riskAlgorithm = new RiskAlgo();
 		
 		double financialRisk = RiskAlgo.getFinancialRisk();
 		riskCategory = RiskAlgo.getRiskCategory(financialRisk);
