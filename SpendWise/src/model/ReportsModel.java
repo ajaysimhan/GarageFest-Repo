@@ -15,15 +15,6 @@ public class ReportsModel
     
     public void buildWasteTransactionList(HashMap<String, Integer> transactionTypes) {
         
-        transactionTypes = new HashMap<String, Integer>();
-        transactionTypes.put("Medical", 1245);
-        transactionTypes.put("Education", 2546);
-        transactionTypes.put("Entertainment", 784);
-        transactionTypes.put("Travel", 400);
-        transactionTypes.put("Food", 9547);
-        transactionTypes.put("Shopping", 7445);
-        
-        
         for(HashMap.Entry<String, Integer> entry : transactionTypes.entrySet()) {
             categories.add(entry.getKey());
             expenses.add(entry.getValue());
@@ -37,11 +28,5 @@ public class ReportsModel
     public ArrayList<Integer> getExpenses(){
 
         return expenses;
-    }
-    
-    public ArrayList<String> getChartStyling(int size){
-        ArrayList<String> chartStyles = new ArrayList<String>();
-        
-        return chartStyles;
     }
 }

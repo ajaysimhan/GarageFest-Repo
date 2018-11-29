@@ -18,6 +18,7 @@ import model.LoginModel;
 import model.ReportsModel;
 import model.SaveKittyModel;
 import products.ProductManager;
+import transactions.TransactionClassifier;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -62,7 +63,8 @@ public class SpendWiseServlet extends HttpServlet {
 			rd3.forward(request, response);
 			break;
 		case "analyseSpending":
-			HashMap<String, Integer> transactionTypes = null;
+		    TransactionClassifier transactions = new TransactionClassifier();
+			HashMap<String, Integer> transactionTypes = transactions.getTransactionsForChart();
 			ReportsModel rm = new ReportsModel();
 			rm.buildWasteTransactionList(transactionTypes);
 			request.setAttribute("categoryList", rm.getCategories());
