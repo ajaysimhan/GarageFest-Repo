@@ -395,32 +395,32 @@
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Your Age</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=age>
+                          <input type="text" class="form-control" id="title" name=age required>
                         </div>
                       </div>
                       <!-- Annual Income -->
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="content">Your Annual Income</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=annualIncome>
+                          <input type="text" class="form-control" id="title" name=annualIncome required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Your Net Worth</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=netWorth>
+                          <input type="text" class="form-control" id="title" name=netWorth required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">The Total Debt you have</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=totaldebt>
+                          <input type="text" class="form-control" id="title" name=totaldebt required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Interest rate of debt</label>
                         <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=debtInterestRate>
+                          <input type="text" class="form-control" id="title" name=debtInterestRate required>
                         </div>
                       </div>
                     </form>

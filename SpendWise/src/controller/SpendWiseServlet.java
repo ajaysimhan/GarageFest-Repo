@@ -2,7 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +15,7 @@ import accounts.Account;
 import accounts.AccountDTO;
 import model.BasicInfoModel;
 import model.LoginModel;
+import model.ReportsModel;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -54,12 +55,16 @@ public class SpendWiseServlet extends HttpServlet {
 			rd3.forward(request, response);
 			break;
 		case "analyseSpending":
-			ArrayList<String> transactionList = new ArrayList<String>();
-			request.setAttribute("transactionList", transactionList);
+		    HashMap<String, Integer> transactionTypes = null;
+		    ReportsModel rm = new ReportsModel();
+		    rm.buildWasteTransactionList(transactionTypes);
+		    request.setAttribute("categoryList", rm.getCategories());
+		    request.setAttribute("expenseList", rm.getExpenses());
 			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd4.forward(request, response);
 			break;
 		case "suggestPortfolio":
+			//ProductManager productManager = new ProductManager(request);
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd5.forward(request, response);
 			break;

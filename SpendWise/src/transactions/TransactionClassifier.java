@@ -62,7 +62,7 @@ public class TransactionClassifier {
 		return transactions.getTransactions();
 	}
 	
-	private double getTotalTransactionAmount(){
+	public double getTotalTransactionAmount(){
 		double totalAmount= 0;
 		for (TransactionDTO t : transactions) {
 			totalAmount += t.getAmount().getAmount();
@@ -70,7 +70,7 @@ public class TransactionClassifier {
 		return totalAmount;
 	}
 	
-	private double getUsefulTransactionAmount(){
+	public double getUsefulTransactionAmount(){
 		double usefulTransactionAmount= 0;
 		for (TransactionDTO t: transactions) {
             if(usefulCategories.contains(t.getCategoryId())) {
@@ -80,7 +80,7 @@ public class TransactionClassifier {
 		return usefulTransactionAmount;
 	}
 	
-	private double getNonUsefulTransactionAmount(){
+	public double getNonUsefulTransactionAmount(){
 		double nonUsefulTransactionAmount= 0;
 		for (TransactionDTO t: transactions) {
             if(nonUsefulCategories.contains(t.getCategoryId())) {

@@ -369,7 +369,7 @@
 											Number</label>
 										<div class="col-lg-10">
 											<input type="text" class="form-control" id="title"
-												name="accountNumber">
+												name="accountNumber" required>
 										</div>
 									</div>
 									<!-- Buttons -->

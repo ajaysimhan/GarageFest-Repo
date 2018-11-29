@@ -1,76 +1,72 @@
 package risk;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.apache.commons.io.FileUtils;
-
+import dao.BasicInfoDTO;
+import model.BasicInfoModel;
 import products.ProductDTO;
 import suggestion.SuggestionDTO;
 import transactionAPI.TransactionDetails;
+import transactions.TransactionClassifier;
 
 public class RiskAlgo
 {
+	
+	static double age=0;
+    static double annualIncome=0;
+    static double netWorth =0;
+    static double debt=0;
+    static double debtInterestRate=0;
+    static double monthlyExpense=0;
+    
+	public RiskAlgo() throws Exception
+	{
+		init();
+	}
 
-    public static void main(String[] args)
+	private void init() throws Exception
+	{
+		BasicInfoDTO basic = BasicInfoModel.getBasicInfo();
+		age = basic.getAge();
+        annualIncome = basic.getAnnualIncome();
+        netWorth = basic.getNetWorth();
+        debt = basic.getTotaldebt();
+        debtInterestRate = basic.getDebtInterestRate();
+        
+        TransactionClassifier tc = new TransactionClassifier();
+        monthlyExpense = tc.getTotalTransactionAmount();
+	}
+	
+    public static SuggestionDTO getSuggestion()
     {
-        double age=0;
-        double annualIncome=0;
-        double netWorth =0;
-        double debt=0;
-        double debtInterestRate=0;
-        double monthlyExpense=0;
-        
-        double accNo=267354811;
-        
+       int accNo=123;
+       
+       TransactionClassifier tc = new TransactionClassifier();
+       double monthlyIncome=annualIncome/12;
+		
+       double wasteAmount = tc.getNonUsefulTransactionAmount();
+       double savingsPermonth = ((double)(Math.random()*10))/18 * monthlyIncome;
+       SuggestionDTO sug = getSavingSuggestionsAndInvestibleAmount(monthlyIncome, monthlyExpense, wasteAmount, savingsPermonth);
+       return sug;
+    }
+
+    public static double getFinancialRisk() throws Exception
+    {
         final double LOGCONSTANT= Math.log(24);
         double inflationRate=2;
-        
-        Scanner dd = new Scanner(System.in);
-
-        System.out.println("Enter your age.");
-        age = dd.nextDouble();
-        System.out.println("Enter your Annual Income.");
-        annualIncome = dd.nextDouble();
-        System.out.println("Enter your netWorth.");
-        netWorth = dd.nextDouble();
-        System.out.println("Enter your total debt.");
-        debt = dd.nextDouble();
-        System.out.println("Enter your debt interest rate.");
-        debtInterestRate = dd.nextDouble();
-        System.out.println("Enter your monthly expense.");
-        monthlyExpense = dd.nextDouble();
-        
-        
-        
         double incomeHealth = getIncomeHealth(annualIncome, LOGCONSTANT);
         double netWorthHealth = getNetworthHealth(netWorth);
         double debtHealth = getDebtHealth(annualIncome,debt,debtInterestRate,inflationRate);
         double expenseHealth = getExpenseHealth(monthlyExpense, annualIncome);
         double agePoints = getAgePoints(age);
+        double monthlyIncome=annualIncome/12;
         
         double financialRisk = getFinancialRisk(incomeHealth, netWorthHealth, debtHealth, expenseHealth, agePoints);
-        System.out.println(financialRisk);
         
-       ArrayList <ProductDTO> pr = getProductsforRisk(financialRisk);
-       
-       double wasteAmount = getWasteAmount(accNo);
-       double savingsPermonth = getSavingsPermonth(accNo);
-       
-       double monthlyIncome=annualIncome/12;
-       SuggestionDTO sug = getSavingSuggestionsAndInvestibleAmount(monthlyIncome, monthlyExpense, wasteAmount, savingsPermonth);
-       
-       
-       System.out.println(pr.toString());
+        return financialRisk;
     }
 
-   
-
-
-
-
-	private static double getIncomeHealth(double annualIncome, double LOGCONSTANT)
+    private static double getIncomeHealth(double annualIncome, double LOGCONSTANT)
     {
         double logIncome = (annualIncome/1000)/LOGCONSTANT;
         double incomeHealth=(logIncome-1)*100;
@@ -157,7 +153,7 @@ public class RiskAlgo
         return 0;
     }
 
-    private static double getFinancialRisk(double incomeHealth, double netWorthHealth, double debtHealth, double expenseHealth, double agePoints)
+    public static double getFinancialRisk(double incomeHealth, double netWorthHealth, double debtHealth, double expenseHealth, double agePoints)
     {
        double financialRisk = (incomeHealth*2 + netWorthHealth*1.5 + debtHealth + expenseHealth*2.5)/7 + agePoints;
        if(financialRisk<5) {
@@ -168,7 +164,8 @@ public class RiskAlgo
        }
        return financialRisk;
     }
-    private static ArrayList<ProductDTO> getProductsforRisk(double financialRisk) {
+    
+    public static ArrayList<ProductDTO> getProductsforRisk(double financialRisk) {
     	ArrayList <ProductDTO> productArray = new ArrayList<>();
 		if(financialRisk<10) {
 			ProductDTO pr1 = new ProductDTO();
@@ -270,10 +267,10 @@ public class RiskAlgo
 			
 		return productArray;
 	}
-
     
-	private static SuggestionDTO getSavingSuggestionsAndInvestibleAmount(double monthlyIncome, double monthlyExpense,
+	public static SuggestionDTO getSavingSuggestionsAndInvestibleAmount(double monthlyIncome, double monthlyExpense,
 			double wasteAmount, double savingsPerMonth) {
+		
 		SuggestionDTO suggestion= new SuggestionDTO();
 		if(savingsPerMonth>=0.5*monthlyIncome) {
 			suggestion.setComment("Kudos, You are an aggresssive saver. Keep going.");
@@ -304,5 +301,19 @@ public class RiskAlgo
 		
 		return suggestion;
 	}
-
+	
+	public static String getRiskCategory(double financialRisk) {
+		if(financialRisk<=20){
+			return "CONSERVATIVE";
+		}else if (financialRisk<=40){
+			return "MODERATELY CONSERVATIVE";
+		}else if (financialRisk<=60){
+			return "MODERATE";
+		}else if (financialRisk<=80){
+			return "MODERATELY AGGRESSIVE";
+		}else if (financialRisk<=100){
+			return "AGGRESSIVE";
+		}
+		return "";
+	}
 }

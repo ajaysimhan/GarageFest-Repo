@@ -36,7 +36,7 @@ public class BasicInfoModel {
 		FileUtils.writeStringToFile(file, basicInfoJson);  
 	}
 	
-	public BasicInfoDTO getBasicInfo() throws Exception {
+	public static BasicInfoDTO getBasicInfo() throws Exception {
 		
 		String basicInfoJson = FileUtils.readFileToString(new File(BASICINFO_FILE_PATH));
 		BasicInfoDTO basicInfoDAO = (BasicInfoDTO) new Gson().fromJson(basicInfoJson, BasicInfoDTO.class);
