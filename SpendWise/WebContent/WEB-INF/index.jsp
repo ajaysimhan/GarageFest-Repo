@@ -40,6 +40,29 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  
+  <style>
+  .overview{
+   position: relative;
+  width: 800px;
+  height: 200px;
+  font-size: 17px;
+  }
+  .startkitty{
+ position: relative;
+  width: 400px;
+  height: 200px;
+  top: 23px;
+  right: 50px;
+  float: right;
+  }
+  .welcome{
+  font-size: 20px;
+  color: #009900;
+  }
+  
+  </style>
+  
 </head>
 
 <body>
@@ -386,22 +409,29 @@
                 <h2><strong>Overview</strong></h2>
               </div>
               <div class="panel-body">
-                Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
-              </br></br></br>
-              Start by adding a few details about yourself and click on the get started button
-              </br></br></br>
-              <form class="form-horizontal">
-                      <!-- Age -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">Your Age</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=age required>
-                        </div>
-                    </form>
+              
+               
+            <div class="startkitty">
+            <img src="img/kitty/start.gif">
+            </div>
+              
+              <div class="overview">
+               <span class="welcome">Welcome!!!!!!!!!!!!</span><br><br>
+I am Tom.<br>
+Have you ever wanted to save money but couldn't because of your spending habits. <br>Trust me I know the feeling. And how difficult it is to manage all of it by yourself.<br><br>
+<span style="color: #ff9900;">Don't worry.</span> <br>Now onwards, I will help you do that. <br>
+You just have to key in a few things and you are all set to save money alongside spending.<br>
+Best thing about it : You wouldn't even know you are saving  .<br>
+Still not convinced <a>See how I am going to help you..</a><br><br><br>
+Ready? Get started by clicking here        <br>      <br><br>        
+
+            
+            
               <div class="col-lg-offset-8 col-lg-9">
               <input type="hidden" name="myAction" value="getStarted">
               <button type="submit" class="btn btn-primary">Get Started</button>                          
-              </div>                        
+              </div> 
+               </div>                       
               </div>
             </div>
           </div>
