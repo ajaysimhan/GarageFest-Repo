@@ -415,7 +415,7 @@
                   </div>
                   <div class="kitty">
                 <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
-         <img src="img/kitty/happykitty.gif" alt="kitty not found" width="350" height="350">
+         <img src="img/kitty/happy.gif" alt="kitty not found" width="250" height="250">
          <div class="kittytext" style="color:#009900">Your account has enough balance which will be transferred at the end of the month</div> 
 		<%}else{%>
                    <img src="img/kitty/sadkitty.gif" alt="kitty not found" width="300" height="300">
