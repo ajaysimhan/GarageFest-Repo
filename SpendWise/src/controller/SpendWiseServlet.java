@@ -64,6 +64,10 @@ public class SpendWiseServlet extends HttpServlet {
 			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd4.forward(request, response);
 			break;
+		case "dataCapture":
+			RequestDispatcher rd8 = request.getRequestDispatcher("/WEB-INF/datacapture.jsp");
+			rd8.forward(request, response);
+			break;
 		case "suggestPortfolio":
 			try {
 				ProductManager productManager = new ProductManager(request);

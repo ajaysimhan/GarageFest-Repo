@@ -424,9 +424,9 @@
 										‚??controlling idea,‚?ù because it controls what happens in
 										the rest of the paragraph.</div>
                                                               <form action="SpendWise">
-                                                                <input type="hidden" name="myAction" value="dataCapture">
-                                                                     <button type="submit" class="btn btn-warning btn-block">I
-                                                                           am ready to begin</button>
+                                                                <input type="hidden" name="myAction" value="suggestPortfolio">
+                                                                     <button type="submit" class="btn btn-warning btn-block">See
+                                                                           Your suggested Portfolios</button>
                                                               </form>
                                                        </div>
                                                 </div>
