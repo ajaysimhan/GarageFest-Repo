@@ -1,187 +1,179 @@
 package risk;
+
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import dao.BasicInfoDTO;
 import model.BasicInfoModel;
 import products.ProductDTO;
 import suggestion.SuggestionDTO;
-import transactionAPI.TransactionDetails;
 import transactions.TransactionClassifier;
 
-public class RiskAlgo
-{
-	
-	static double age=0;
-    static double annualIncome=0;
-    static double netWorth =0;
-    static double debt=0;
-    static double debtInterestRate=0;
-    static double monthlyExpense=0;
-    
-	public RiskAlgo() throws Exception
-	{
+public class RiskAlgo {
+
+	static double age = 0;
+	static double annualIncome = 0;
+	static double netWorth = 0;
+	static double debt = 0;
+	static double debtInterestRate = 0;
+	static double monthlyExpense = 0;
+
+	public RiskAlgo() throws Exception {
 		init();
 	}
 
-	private void init() throws Exception
-	{
+	private void init() throws Exception {
 		BasicInfoDTO basic = BasicInfoModel.getBasicInfo();
 		age = basic.getAge();
-        annualIncome = basic.getAnnualIncome();
-        netWorth = basic.getNetWorth();
-        debt = basic.getTotaldebt();
-        debtInterestRate = basic.getDebtInterestRate();
-        
-        TransactionClassifier tc = new TransactionClassifier();
-        monthlyExpense = tc.getTotalTransactionAmount();
+		annualIncome = basic.getAnnualIncome();
+		netWorth = basic.getNetWorth();
+		debt = basic.getTotaldebt();
+		debtInterestRate = basic.getDebtInterestRate();
+
+		TransactionClassifier tc = new TransactionClassifier();
+		monthlyExpense = tc.getTotalTransactionAmount();
 	}
-	
-    public static SuggestionDTO getSuggestion()
-    {
-       int accNo=123;
-       
-       TransactionClassifier tc = new TransactionClassifier();
-       double monthlyIncome=annualIncome/12;
-		
-       double wasteAmount = tc.getNonUsefulTransactionAmount();
-       double savingsPermonth = ((double)(Math.random()*10))/18 * monthlyIncome;
-       SuggestionDTO sug = getSavingSuggestionsAndInvestibleAmount(monthlyIncome, monthlyExpense, wasteAmount, savingsPermonth);
-       return sug;
-    }
 
-    public static double getFinancialRisk() throws Exception
-    {
-        final double LOGCONSTANT= Math.log(24);
-        double inflationRate=2;
-        double incomeHealth = getIncomeHealth(annualIncome, LOGCONSTANT);
-        double netWorthHealth = getNetworthHealth(netWorth);
-        double debtHealth = getDebtHealth(annualIncome,debt,debtInterestRate,inflationRate);
-        double expenseHealth = getExpenseHealth(monthlyExpense, annualIncome);
-        double agePoints = getAgePoints(age);
-        double monthlyIncome=annualIncome/12;
-        
-        double financialRisk = getFinancialRisk(incomeHealth, netWorthHealth, debtHealth, expenseHealth, agePoints);
-        
-        return financialRisk;
-    }
+	public static SuggestionDTO getSuggestion() {
+		int accNo = 123;
 
-    private static double getIncomeHealth(double annualIncome, double LOGCONSTANT)
-    {
-        double logIncome = (annualIncome/1000)/LOGCONSTANT;
-        double incomeHealth=(logIncome-1)*100;
-        if(incomeHealth<5) {
-            return 5;
-        }
-        if(incomeHealth>100) {
-            return 100;
-        }
-        return incomeHealth;
-    }
+		TransactionClassifier tc = new TransactionClassifier();
+		double monthlyIncome = annualIncome / 12;
 
-    private static double getNetworthHealth(double netWorth)
-    {
-        if(netWorth<-100000) {
-            return -20;
-        }else if(netWorth<-10000) {
-            return -10;
-        }else if(netWorth<0) {
-            return 0;
-        }else if(netWorth<1000) {
-            return 10;
-        }else if(netWorth<5000) {
-            return 20;
-        }else if(netWorth<10000) {
-            return 30;
-        }else if(netWorth<50000) {
-            return 40;
-        }else if(netWorth<100000) {
-            return 50;
-        }else if(netWorth<100000) {
-            return 60;
-        }else if(netWorth<500000) {
-            return 75;
-        }else if(netWorth<1000000) {
-            return 90;
-        }
-        return 100;
-    }
-    
-    private static double getDebtHealth(double annualIncome, double debt, double debtInterestRate, double inflationRate)
-    {
-        double debtRatio = debt/annualIncome;
-        double debtBurden= debtInterestRate-inflationRate;
-        if(debtBurden>2) {
-            debtRatio=debtRatio*(debtBurden/2);
-        }
-        if(debtRatio>20) {
-            return -90;
-        }else if(debtRatio>15) {
-            return -80;
-        }else if(debtRatio>10) {
-            return -70;
-        }else if(debtRatio>5) {
-            return -60;
-        }else if(debtRatio>4) {
-            return -50;
-        }else if(debtRatio>3) {
-            return -40;
-        }else if(debtRatio>2) {
-            return -30;
-        }else if(debtRatio>1) {
-            return -10;
-        }
-        return 0;
-    }
-    
-    private static double getExpenseHealth(double monthlyExpense, double annualIncome)
-    {
-        double monthlyIncome=annualIncome/12;
-        double expenseHealth=100-(monthlyExpense/monthlyIncome)*100;
-        return expenseHealth;
-    }
-    
-    private static double getAgePoints(double age)
-    {
-        if(age<20) {
-            return 20;
-        }else if(age<=60){
-            return (60-age)/2;
-        }else if(age>60){
-            return (60-age);
-        }
-        return 0;
-    }
+		double wasteAmount = tc.getNonUsefulTransactionAmount();
+		double savingsPermonth = ((double) (Math.random() * 10)) / 18 * monthlyIncome;
+		SuggestionDTO sug = getSavingSuggestionsAndInvestibleAmount(monthlyIncome, monthlyExpense, wasteAmount,
+				savingsPermonth);
+		return sug;
+	}
 
-    public static double getFinancialRisk(double incomeHealth, double netWorthHealth, double debtHealth, double expenseHealth, double agePoints)
-    {
-       double financialRisk = (incomeHealth*2 + netWorthHealth*1.5 + debtHealth + expenseHealth*2.5)/7 + agePoints;
-       if(financialRisk<5) {
-           return 5;
-       }
-       if(financialRisk>100) {
-           return 100;
-       }
-       return financialRisk;
-    }
-    
-    public static ArrayList<ProductDTO> getProductsforRisk(double financialRisk) {
-    	ArrayList <ProductDTO> productArray = new ArrayList<>();
-		if(financialRisk<10) {
+	public static double getFinancialRisk() throws Exception {
+		final double LOGCONSTANT = Math.log(24);
+		double inflationRate = 2;
+		double incomeHealth = getIncomeHealth(annualIncome, LOGCONSTANT);
+		double netWorthHealth = getNetworthHealth(netWorth);
+		double debtHealth = getDebtHealth(annualIncome, debt, debtInterestRate, inflationRate);
+		double expenseHealth = getExpenseHealth(monthlyExpense, annualIncome);
+		double agePoints = getAgePoints(age);
+		double monthlyIncome = annualIncome / 12;
+
+		double financialRisk = getFinancialRisk(incomeHealth, netWorthHealth, debtHealth, expenseHealth, agePoints);
+
+		return financialRisk;
+	}
+
+	private static double getIncomeHealth(double annualIncome, double LOGCONSTANT) {
+		double logIncome = (annualIncome / 1000) / LOGCONSTANT;
+		double incomeHealth = (logIncome - 1) * 100;
+		if (incomeHealth < 5) {
+			return 5;
+		}
+		if (incomeHealth > 100) {
+			return 100;
+		}
+		return incomeHealth;
+	}
+
+	private static double getNetworthHealth(double netWorth) {
+		if (netWorth < -100000) {
+			return -20;
+		} else if (netWorth < -10000) {
+			return -10;
+		} else if (netWorth < 0) {
+			return 0;
+		} else if (netWorth < 1000) {
+			return 10;
+		} else if (netWorth < 5000) {
+			return 20;
+		} else if (netWorth < 10000) {
+			return 30;
+		} else if (netWorth < 50000) {
+			return 40;
+		} else if (netWorth < 100000) {
+			return 50;
+		} else if (netWorth < 100000) {
+			return 60;
+		} else if (netWorth < 500000) {
+			return 75;
+		} else if (netWorth < 1000000) {
+			return 90;
+		}
+		return 100;
+	}
+
+	private static double getDebtHealth(double annualIncome, double debt, double debtInterestRate,
+			double inflationRate) {
+		double debtRatio = debt / annualIncome;
+		double debtBurden = debtInterestRate - inflationRate;
+		if (debtBurden > 2) {
+			debtRatio = debtRatio * (debtBurden / 2);
+		}
+		if (debtRatio > 20) {
+			return -90;
+		} else if (debtRatio > 15) {
+			return -80;
+		} else if (debtRatio > 10) {
+			return -70;
+		} else if (debtRatio > 5) {
+			return -60;
+		} else if (debtRatio > 4) {
+			return -50;
+		} else if (debtRatio > 3) {
+			return -40;
+		} else if (debtRatio > 2) {
+			return -30;
+		} else if (debtRatio > 1) {
+			return -10;
+		}
+		return 0;
+	}
+
+	private static double getExpenseHealth(double monthlyExpense, double annualIncome) {
+		double monthlyIncome = annualIncome / 12;
+		double expenseHealth = 100 - (monthlyExpense / monthlyIncome) * 100;
+		return expenseHealth;
+	}
+
+	private static double getAgePoints(double age) {
+		if (age < 20) {
+			return 20;
+		} else if (age <= 60) {
+			return (60 - age) / 2;
+		} else if (age > 60) {
+			return (60 - age);
+		}
+		return 0;
+	}
+
+	public static double getFinancialRisk(double incomeHealth, double netWorthHealth, double debtHealth,
+			double expenseHealth, double agePoints) {
+		double financialRisk = (incomeHealth * 2 + netWorthHealth * 1.5 + debtHealth + expenseHealth * 2.5) / 7
+				+ agePoints;
+		if (financialRisk < 5) {
+			return 5;
+		}
+		if (financialRisk > 100) {
+			return 100;
+		}
+		return financialRisk;
+	}
+
+	public static ArrayList<ProductDTO> getProductsforRisk(double financialRisk) {
+		ArrayList<ProductDTO> productArray = new ArrayList<>();
+		if (financialRisk < 10) {
 			ProductDTO pr1 = new ProductDTO();
 			pr1.setId(1);
 			pr1.setName("SpendWise Long-Term Debt Conservative Fund");
 			pr1.setFixedIncomeBonds(100);
 			productArray.add(pr1);
-			
-		}else if(financialRisk<20) {
+
+		} else if (financialRisk < 20) {
 			ProductDTO pr2 = new ProductDTO();
 			pr2.setId(2);
 			pr2.setName("iShares Debt and index Conservative Fund");
 			pr2.setFixedIncomeBonds(90);
 			pr2.setExchangeTradedFund(10);
 			productArray.add(pr2);
-		}else if(financialRisk<40) {
+		} else if (financialRisk < 40) {
 			ProductDTO pr3 = new ProductDTO();
 			pr3.setId(3);
 			pr3.setName("DSP Black Rock fixed income  Fund");
@@ -196,7 +188,7 @@ public class RiskAlgo
 			pr4.setExchangeTradedFund(20);
 			pr4.setLargeCapStocks(10);
 			productArray.add(pr4);
-		}else if(financialRisk<60) {
+		} else if (financialRisk < 60) {
 			ProductDTO pr5 = new ProductDTO();
 			pr5.setId(5);
 			pr5.setName("SpendWise L exteria Balanced UTK Fund");
@@ -221,7 +213,7 @@ public class RiskAlgo
 			pr7.setLargeCapStocks(20);
 			pr7.setMidCapStocks(20);
 			productArray.add(pr7);
-		}else if(financialRisk<80) {
+		} else if (financialRisk < 80) {
 			ProductDTO pr8 = new ProductDTO();
 			pr8.setId(8);
 			pr8.setName("MFS® Growth Allocation Fund");
@@ -248,7 +240,7 @@ public class RiskAlgo
 			pr10.setMidCapStocks(30);
 			pr10.setMidCapStocks(15);
 			productArray.add(pr10);
-		}else if(financialRisk<95) {
+		} else if (financialRisk < 95) {
 			ProductDTO pr11 = new ProductDTO();
 			pr11.setId(11);
 			pr11.setName("Loomis Sayles Growth A Fund");
@@ -267,7 +259,7 @@ public class RiskAlgo
 			pr12.setMidCapStocks(10);
 			pr12.setSmallAndMicroCapStocks(20);
 			productArray.add(pr12);
-		}else if(financialRisk<=100) {
+		} else if (financialRisk <= 100) {
 			ProductDTO pr13 = new ProductDTO();
 			pr13.setId(13);
 			pr13.setName("AJ umam Growth Aggressive Fund");
@@ -277,54 +269,54 @@ public class RiskAlgo
 			pr13.setSmallAndMicroCapStocks(35);
 			productArray.add(pr13);
 		}
-			
+
 		return productArray;
 	}
-    
+
 	public static SuggestionDTO getSavingSuggestionsAndInvestibleAmount(double monthlyIncome, double monthlyExpense,
 			double wasteAmount, double savingsPerMonth) {
-		
-		SuggestionDTO suggestion= new SuggestionDTO();
-		if(savingsPerMonth>=0.5*monthlyIncome) {
+
+		SuggestionDTO suggestion = new SuggestionDTO();
+		if (savingsPerMonth >= 0.5 * monthlyIncome) {
 			suggestion.setComment("Kudos, You are an aggresssive saver. Keep going.");
-		}else if(savingsPerMonth>=0.3*monthlyIncome) {
-			if(wasteAmount>=0.5*monthlyExpense) {
+		} else if (savingsPerMonth >= 0.3 * monthlyIncome) {
+			if (wasteAmount >= 0.5 * monthlyExpense) {
 				suggestion.setComment("You are saving good amount. But you can still fine tune your spending pattern");
-			}else {
+			} else {
 				suggestion.setComment("You are saving good amount.");
 			}
-		}else if(savingsPerMonth>=0.2*monthlyIncome) {
+		} else if (savingsPerMonth >= 0.2 * monthlyIncome) {
 			suggestion.setComment("You are saving just enough amount. Try to increase your savings");
-		}else if(savingsPerMonth>=0.1*monthlyIncome) {
-			if(wasteAmount>=0.3*monthlyExpense) {
+		} else if (savingsPerMonth >= 0.1 * monthlyIncome) {
+			if (wasteAmount >= 0.3 * monthlyExpense) {
 				suggestion.setComment("You are not saving enough. Try to cut down your expenses");
-		}else {
-			suggestion.setComment("You are not saving enough");
+			} else {
+				suggestion.setComment("You are not saving enough");
 			}
-		}else {
-				suggestion.setComment("You are not saving enough. Your spending doesn't look good");
-			}
-			
-			if(savingsPerMonth>=0.2*monthlyIncome) {
-				suggestion.setInvestibleAmount(savingsPerMonth);
-			}else {
-				if(wasteAmount>=0.3*monthlyIncome)
-				suggestion.setInvestibleAmount(savingsPerMonth + wasteAmount/2);
-			}
-		
+		} else {
+			suggestion.setComment("You are not saving enough. Your spending doesn't look good");
+		}
+
+		if (savingsPerMonth >= 0.2 * monthlyIncome) {
+			suggestion.setInvestibleAmount(savingsPerMonth);
+		} else {
+			if (wasteAmount >= 0.3 * monthlyIncome)
+				suggestion.setInvestibleAmount(savingsPerMonth + wasteAmount / 2);
+		}
+
 		return suggestion;
 	}
-	
+
 	public static String getRiskCategory(double financialRisk) {
-		if(financialRisk<=20){
+		if (financialRisk <= 20) {
 			return "CONSERVATIVE";
-		}else if (financialRisk<=40){
+		} else if (financialRisk <= 40) {
 			return "MODERATELY CONSERVATIVE";
-		}else if (financialRisk<=60){
+		} else if (financialRisk <= 60) {
 			return "MODERATE";
-		}else if (financialRisk<=80){
+		} else if (financialRisk <= 80) {
 			return "MODERATELY AGGRESSIVE";
-		}else if (financialRisk<=100){
+		} else if (financialRisk <= 100) {
 			return "AGGRESSIVE";
 		}
 		return "";
