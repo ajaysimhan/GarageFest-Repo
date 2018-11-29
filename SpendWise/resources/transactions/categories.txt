@@ -1,0 +1,233 @@
+{
+	"categories": [{
+		"categoryId": 39,
+		"description": "Utilities",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 15,
+		"description": "Cable/Satellite/Telecom",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 11,
+		"description": "Healthcare/Medical",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 92,
+		"description": "Sales/Service Income",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 29,
+		"description": "Salary/Regular  Income",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 30,
+		"description": "Investment/Retirement Income",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 96,
+		"description": "Interest Income",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 32,
+		"description": "Other Income",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 225,
+		"description": "Rewards",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 27,
+		"description": "Deposits",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 114,
+		"description": "Expenses Reimbursements",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 227,
+		"description": "Refunds/Adjustments",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 3,
+		"description": "Charitable Giving",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 9,
+		"description": "Gifts",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 2,
+		"description": "Automotive/Fuel",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 11,
+		"description": "Healthcare/Medical",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 14,
+		"description": "Insurance",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 45,
+		"description": "Office Expenses",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 16,
+		"description": "Services/Supplies",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 104,
+		"description": "Postage/Shipping",
+		"indicator": "N"
+	},
+	{
+		"categoryId": 37,
+		"description": "Taxes",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 19,
+		"description": "Other Expenses",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 33,
+		"description": "Check Payment",
+		"indicator": "U"
+	},
+	{
+		"categoryId": 24,
+		"description": "Service Charges/Fees",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 13,
+		"description": "Home Improvement",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 43,
+		"description": "Electronics/General Merchandise",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 10,
+		"description": "Groceries",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 42,
+		"description": "Pets/Pet Care",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 18,
+		"description": "Mortgage",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 21,
+		"description": "Rent",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 17,
+		"description": "Loans",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 39,
+		"description": "Utilities",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 15,
+		"description": "Cable/Satellite/Telecom",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 20,
+		"description": "Personal/Family",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 25,
+		"description": "ATM/Cash Withdraws",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 6,
+		"description": "Education",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 108,
+		"description": "Subscriptions/Renewals",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 22,
+		"description": "Restaurants",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 7,
+		"description": "Entertainment/Recreation",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 23,
+		"description": "Travel",
+		"indicator": "N"
+	},	
+	{
+		"categoryId": 28,
+		"description": "Transfers",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 36,
+		"description": "Securities Trades",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 40,
+		"description": "Savings",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 26,
+		"description": "Credit Card Payments",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 41,
+		"description": "Retirement Contributions",
+		"indicator": "U"
+	},	
+	{
+		"categoryId": 1,
+		"description": "Uncategorized",
+		"indicator": "N"
+	}
+	]
+}
