@@ -375,7 +375,7 @@ height: 500px;
    </li>
    <li>
       <a>
-         <form action="SpendWise">
+         <form action="SpendWise" method="post">
             <i class="icon_desktop"></i>
             <input type="hidden" name="myAction" value="suggestPortfolio">
             <button type="submit">Products</button>
