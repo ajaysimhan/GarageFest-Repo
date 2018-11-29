@@ -45,3 +45,9 @@
 	margin-top: 10px;
 }
 
+.ScrollStyle
+{
+    max-height: 650;
+    overflow-y: scroll;
+}
+
