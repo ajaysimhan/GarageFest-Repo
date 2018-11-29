@@ -42,22 +42,22 @@
   ======================================================= -->
   <style>
   .balance{
-  font-size:35px; 
-  color: #000000; 
+  font-size:17px; 
+
   float: right;
  	 position: relative;
-    width: 500px;
+    width: 600px;
     height: 200px;
-   top:80px;
+   top:30px;
   }
   .kitty{
    position: relative;
-   left:20%;
+   left:15%;
   }
   .kittytext{
    font-size:20px; 
     position: relative;
-  	left:5%;
+  	left:2%;
   }
   </style>
 </head>
@@ -365,7 +365,7 @@
    <li>
    
       <a>
-         <form action="SpendWise">
+         <form action="SpendWise" method="post">
             <i class="icon_desktop"></i>
             <input type="hidden" name="myAction" value="suggestPortfolio">
             <button type="submit">Products</button>
@@ -416,22 +416,19 @@
               <div class="panel-body">
                 <div class="panel panel-primary">
                   <div class="panel-heading">Savekitty Details</div>                  
-                  <div class="balance">Balance<br>
-                  <span  <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
-                  style="color: green;"
-                  <%}else{%>
-                  style="color: red;"
-                  <%} %>
-                  >$5000</span>
+                  <div class="balance">
+                 <span style="font-size:18; color:  #00cc00 "> You have successfully started your savings plan.</span><br><br> Now onwards I will be deducting an amount corresponding to the 10% of every transactions (If you want to change the percentage,<a> click here</a>) and will add to my kitty. 
+<br>
+Emergency funds and Debt repayment transactions are excluded. It will be then used to fund the product you selected.<br><br>
+You are all set for now!!
+                  
                   </div>
                   <div class="kitty">
-                <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
+               
          <img src="img/kitty/happy.gif" alt="kitty not found" width="250" height="250">
-         <div class="kittytext" style="color:#009900">Your account has enough balance which will be transferred at the end of the month</div> 
-		<%}else{%>
-                   <img src="img/kitty/crying.gif" alt="kitty not found" width="300" height="300">
-                    <div class="kittytext" style="color:#ff0000"> Your balance is low!!!</div> 
-                   <%} %>
+         <div class="kittytext" style="color:#009900">You are doing great buddy!!!</div> 
+		
+                   
                    </div>
                                   
                 </div>  

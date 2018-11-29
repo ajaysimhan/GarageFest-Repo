@@ -44,7 +44,7 @@
     <style>
   .overview{
    position: relative;
-  width: 850px;
+  width: 830px;
   height: 200px;
 
   }
@@ -64,7 +64,6 @@
   .yay{
   font-size: 15px;
   color: #00994d;
-;
   }
   </style>
   
@@ -373,7 +372,7 @@
    </li>
    <li>
       <a>
-         <form action="SpendWise">
+         <form action="SpendWise" method="post">
             <i class="icon_desktop"></i>
             <input type="hidden" name="myAction" value="suggestPortfolio">
             <button type="submit">Products</button>

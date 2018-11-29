@@ -357,9 +357,18 @@
          </form>
       </a>
    </li>
-   <li>
+    <li>
       <a>
          <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise" method="post">
             <i class="icon_desktop"></i>
             <input type="hidden" name="myAction" value="suggestPortfolio">
             <button type="submit">Products</button>
