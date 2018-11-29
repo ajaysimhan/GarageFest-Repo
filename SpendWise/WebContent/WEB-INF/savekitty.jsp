@@ -352,7 +352,18 @@
          </form>
       </a>
    </li>
+   
+     <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
    <li>
+   
       <a>
          <form action="SpendWise">
             <i class="icon_desktop"></i>
@@ -418,7 +429,7 @@
          <img src="img/kitty/happy.gif" alt="kitty not found" width="250" height="250">
          <div class="kittytext" style="color:#009900">Your account has enough balance which will be transferred at the end of the month</div> 
 		<%}else{%>
-                   <img src="img/kitty/sadkitty.gif" alt="kitty not found" width="300" height="300">
+                   <img src="img/kitty/crying.gif" alt="kitty not found" width="300" height="300">
                     <div class="kittytext" style="color:#ff0000"> Your balance is low!!!</div> 
                    <%} %>
                    </div>

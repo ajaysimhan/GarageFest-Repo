@@ -101,6 +101,17 @@
 	pieChart.update();
     };
 </script>
+<style>
+.reportkitty{
+position: relative;
+float: right;
+padding-top: 250px;
+ 
+}
+.chart{
+
+}
+</style>
 </head>
 
 <body>
@@ -356,6 +367,15 @@
    <li>
       <a>
          <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise">
             <i class="icon_desktop"></i>
             <input type="hidden" name="myAction" value="suggestPortfolio">
             <button type="submit">Products</button>
@@ -398,18 +418,32 @@
 
                                          </ol>
                                   </div>
+                                           
+                       
                            </div>
+              
+          		
                            <div class="row">
                                   <!-- Pie -->
-                                  <div class="col-lg-9">
+                                  <div class="col-lg-8">
                                          <header class="heading">
                                                 <b><font size="5">Expenditures</font></b>
                                          </header>
                                          <div class="conatiner text-center">
                                                 <canvas id="myChart" height="200"></canvas>
+                                                
+                                                
                                          </div>
+                                         
                                   </div>
+                                       <div>         
+          		<img src="img/kitty/report.gif" class="reportkitty">
+          		</div>
+                                  
                            </div>
+                           
+                     
+                        <div class="chart">
                            <script
                                   src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
                            <script>
@@ -435,6 +469,9 @@
                      }
                   });
               </script>
+          		
+          		</div>
+              
                            <div class="row">
                                   <div class="col-md-12 portlets">
                                          <section class="panel">
@@ -443,21 +480,14 @@
                                                        <div class="panel panel-primary">
                                                               <div class="panel-heading">We have a plan for automatic
                                                                      savings</div>
-                                                              <div class="panel-content">Paragraphs are the building
-                                                                     blocks of papers. Many students define paragraphs in terms of
-                                                                     length: a paragraph is a group of at least five sentences, a
-                                                                     paragraph is half a page long, etc. In reality, though, the
-                                                                     unity and coherence of ideas among sentences is what
-										constitutes a paragraph. A paragraph is defined as ‚??a group
-										of sentences or a single sentence that forms a unit‚?ù
-										(Lunsford and Connors 116). Length and appearance do not
-										determine whether a section in a paper is a paragraph. For
-										instance, in some styles of writing, particularly journalistic
-										styles, a paragraph can be just one sentence long. Ultimately,
-										a paragraph is a sentence or group of sentences that support
-										one main idea. In this handout, we will refer to this as the
-										‚??controlling idea,‚?ù because it controls what happens in
-										the rest of the paragraph.</div>
+                                                              <div class="panel-content">
+
+														Wow..!! You are indeed a lavish spender!!! <br><br>
+														
+														Look at all those categories. These are mostly unnecessary expenses you spend on. 
+														If you save a small amount every time you spend in one of these categories, it would make quite an amount.<br>
+														Want me to do that for you? Click on the I am ready to begin button (Only if you are ready).<br>
+														</div>
                                                               <form action="SpendWise">
                                                                 <input type="hidden" name="myAction" value="dataCapture">
                                                                      <button type="submit" class="btn btn-warning btn-block">I

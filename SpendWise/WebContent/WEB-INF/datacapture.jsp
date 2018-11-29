@@ -40,6 +40,34 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  
+    <style>
+  .overview{
+   position: relative;
+  width: 850px;
+  height: 200px;
+
+  }
+  .datacapturekitty{
+ position: relative;
+  width: 10px;
+  height: 10px;
+
+   right: 230px;
+
+  float: right;
+  }
+  .congratulations{
+  font-size: 20px;
+  color: #009900;
+  }
+  .yay{
+  font-size: 15px;
+  color: #00994d;
+;
+  }
+  </style>
+  
 </head>
 
 <body>
@@ -307,7 +335,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-   <li class="active">
+   <li>
       <a>
          <form action="SpendWise">
             <i class="icon_house_alt"></i>
@@ -331,6 +359,15 @@
             <i class="icon_piechart"></i>
             <input type="hidden" name="myAction" value="analyseSpending">
             <button type="submit">Spending</button>   
+         </form>
+      </a>
+   </li>
+   <li class="active">
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
          </form>
       </a>
    </li>
@@ -374,6 +411,7 @@
             <button type="submit">Home</button>   
          </form>
          </a></li>
+         <li><i class="icon_documents_alt"></i>User Info</li>
             </ol>
           </div>
         </div>
@@ -386,10 +424,17 @@
                 <h2><strong>Overview</strong></h2>
               </div>
               <div class="panel-body">
-                Do you hate it when you really need money, but your wallet is empty? No matter how little or how much money you have, spending it wisely is a good idea; it enables you to get the most bang for your buck. Follow these tips to reduce expenditures in key areas and adopt a safer overall approach to shopping.     
-              </br></br></br>
-              Start by adding a few details about yourself and click on the get started button
-              </br></br></br>
+              <div class="datacapturekitty">
+            <img src="img/kitty/datacapture.gif" height="200px" width="200px">
+            </div>
+              <div class="overview">
+              <span class="congratulations"> Congratulations..!!!</span><br><br>
+                
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="yay">Yay!!!</span> You are going in the right direction. Hereafter every time you spend I will be saving a small  amount to my kitty (Yeah I have one..!!). These amount will be then used to fund your portfolio (of course you will have to select one)
+<br><br><br>But first you need to fill out the following details about yourself so that I can start working to suggest portfolios for you.
+
+              </div>
               <form class="form-horizontal" method="post">
                       <!-- Age -->
                       <div class="form-group">

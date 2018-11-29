@@ -54,7 +54,6 @@
   height: 200px;
   top: 23px;
   right: 50px;
- 
   float: right;
   }
   .welcome{
@@ -309,7 +308,7 @@
                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
               </li>
               <li>
-                <a href="login.jsp"><i class="icon_key_alt"></i> Log Out</a>
+                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
               </li>
               <li>
                 <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>

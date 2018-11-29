@@ -4,7 +4,7 @@
       "CONTAINER": "bank",
       "id": 2829798,
       "amount": {
-        "amount": 12345.12,
+        "amount": 1000,
         "currency": "USD"
       },
       "runningBalance":{
@@ -13,7 +13,7 @@
       },
       "baseType": "DEBIT",
       "categoryType": "EXPENSE",
-      "categoryId": 17,
+      "categoryId": 39,
       "category": "Loans",
       "categorySource": "SYSTEM",
       "highLevelCategoryId": 10000004,
@@ -49,7 +49,7 @@
       "CONTAINER": "bank",
       "id": 11111111,
       "amount": {
-        "amount": 12345.12,
+        "amount": 2000,
         "currency": "USD"
       },
       "runningBalance":{
@@ -58,7 +58,7 @@
       },
       "baseType": "DEBIT",
       "categoryType": "EXPENSE",
-      "categoryId": 17,
+      "categoryId": 15,
       "category": "Loans",
       "categorySource": "SYSTEM",
       "highLevelCategoryId": 10000004,
@@ -91,10 +91,239 @@
       }
    },
    {
-      "CONTAINER": "bank",
+     "CONTAINER": "bank",
       "id": 11111111,
       "amount": {
-        "amount": 7777,
+        "amount": 9999,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 11,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 92,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 7500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 43,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 4000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 10,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 8000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 108,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   }
+   ]
+}
+{
+   "transaction": [
+   {
+      "CONTAINER": "bank",
+      "id": 2829798,
+      "amount": {
+        "amount": 1000,
         "currency": "USD"
       },
       "runningBalance":{
@@ -103,7 +332,915 @@
       },
       "baseType": "DEBIT",
       "categoryType": "EXPENSE",
-      "categoryId": 32,
+      "categoryId": 39,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+    {
+      "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 2000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 15,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+   {
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 9999,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 11,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 92,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 7500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 43,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 4000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 10,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 8000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 108,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   }
+   ]
+}
+{
+   "transaction": [
+   {
+      "CONTAINER": "bank",
+      "id": 2829798,
+      "amount": {
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 39,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+    {
+      "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 2000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 15,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+   {
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 9999,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 11,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 92,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 7500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 43,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 4000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 10,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 8000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 108,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   }
+   ]
+}
+{
+   "transaction": [
+   {
+      "CONTAINER": "bank",
+      "id": 2829798,
+      "amount": {
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 39,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+    {
+      "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 2000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 15,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+   {
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 9999,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 11,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 92,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 7500,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 43,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 4000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 10,
+      "category": "Loans",
+      "categorySource": "SYSTEM",
+      "highLevelCategoryId": 10000004,
+      "date": "2014-07-01",
+      "createdDate": "2014-07-01T13:42:35Z",
+      "lastUpdated": "2014-07-01T13:42:35Z",
+      "postDate": "2014-07-01",
+      "description":{
+        "original":  "ACH Withdrawal-Debit XXXXXXXX00 - PPD US BANK - LOAN A BILL PAYMT",
+        "consumer": "My Loan Payment",
+        "simple": "U.S. Bank Loan"
+      },
+      "isManual": false,
+      "status": "POSTED",
+      "accountId": 836726,
+      "type":"PAYMENT",
+      "subType": "LOAN",
+      "merchant":{
+        "id": "u.s.bank",
+        "source": "FACTUAL",
+        "name": "U.S. Bank",
+        "categoryLabel": ["Loans"],
+        "address": {
+         "address1" :"4160 Mission St",
+         "city" :"San Francisco",
+         "state" :"CA",
+         "country" :"USA",
+         "zip" : 94112
+        }
+      }
+   },
+{
+     "CONTAINER": "bank",
+      "id": 11111111,
+      "amount": {
+        "amount": 8000,
+        "currency": "USD"
+      },
+      "runningBalance":{
+        "amount": 1500,
+        "currency": "USD"
+      },
+      "baseType": "DEBIT",
+      "categoryType": "EXPENSE",
+      "categoryId": 108,
       "category": "Loans",
       "categorySource": "SYSTEM",
       "highLevelCategoryId": 10000004,
