@@ -24,10 +24,10 @@ public class ProductManager {
 	
 	private void initializeProducts() throws Exception {
 		
-		
-		double financialRisk = RiskAlgo.getFinancialRisk();
-		riskCategory = RiskAlgo.getRiskCategory(financialRisk);
-		products = RiskAlgo.getProductsforRisk(financialRisk);
-		suggestion = RiskAlgo.getSuggestion();
+		RiskAlgo ra = new RiskAlgo();
+		double financialRisk = ra.getFinancialRisk();
+		riskCategory = ra.getRiskCategory(financialRisk);
+		products = ra.getProductsforRisk(financialRisk);
+		suggestion = ra.getSuggestion();
 	}
 }

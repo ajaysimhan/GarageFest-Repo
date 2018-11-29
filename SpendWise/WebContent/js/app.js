@@ -538,7 +538,7 @@ Highcharts.chart('12', {
     }]
 });
 
-Highcharts.chart('13', {
+Highcharts.chart('aa13', {
     chart: {
         type: 'pie',
         options3d: {

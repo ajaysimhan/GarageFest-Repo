@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <%@page import="java.util.ArrayList"%>
 <%@page import="products.ProductDTO"%>
@@ -42,8 +43,7 @@
 <link href="css/xcharts.min.css" rel=" stylesheet">
 <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
 <link href="css/vimal.css" rel="stylesheet">
-<script
-	src="code/highcharts.js"></script>
+<script src="code/highcharts.js"></script>
 <!-- =======================================================
     Theme Name: NiceAdmin
     Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -70,10 +70,9 @@
 				<form action="SpendWise">
 					<input type="hidden" name="myAction" value="home">
 					<button type="submit">
-						Spend <span class="lite">Wise
+						Spend <span class="lite">Wise 
 					</button>
-				</form>
-				</span>
+				</form> </span>
 			</a>
 			<!--logo end-->
 
@@ -231,7 +230,7 @@
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"> <span class="profile-ava">
 								<img alt="" src="img/avatar1_small.jpg">
-						</span> <span class="username"><%=session.getAttribute("username") %></span>
+						</span> <span class="username"><%=session.getAttribute("username")%></span>
 							<b class="caret"></b>
 					</a>
 						<ul class="dropdown-menu extended logout">
@@ -242,8 +241,8 @@
 							<li><a href="#"><i class="icon_clock_alt"></i> Timeline</a>
 							</li>
 							<li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-							<li><a href="login.html"><i class="icon_key_alt"></i>
-									Log Out</a></li>
+							<li><a href="login.jsp"><i class="icon_key_alt"></i> Log
+									Out</a></li>
 							<li><a href="documentation.html"><i class="icon_key_alt"></i>
 									Documentation</a></li>
 							<li><a href="documentation.html"><i class="icon_key_alt"></i>
@@ -338,8 +337,10 @@
 				<div class="row">
 					<div class="col-md-12 portlets">
 						<section class="panel ">
-							<header class="panel-heading"> Risk Category :
-								Conservative// </header>
+							<header class="panel-heading">
+								Risk Category :
+								<%=request.getAttribute("riskCategory")%>
+							</header>
 							<div class="panel-body ScrollStyle">
 								<div class="panel panel-primary">
 									<div class="panel-heading">Here are a few products to
@@ -351,19 +352,17 @@
 
 									<div class="tab-pane" id="chartjs">
 										<div class="row">
-<% ArrayList productList = (ArrayList)request.getAttribute("productList");%>
-											<c:forEach items="${productList}" var="product">
+											<c:forEach var="product" items="${requestScope.productlist}">
 												<!-- Line -->
 												<div class="col-lg-12">
 													<section class="panel">
 														<header class="panel-heading">
 															<INPUT TYPE="radio" NAME="productSelected"
-																VALUE="${product.getId()}%>" />
-															${product.getName()}
+																VALUE="${product.getId()}" /> ${product.getName()} 
+
 														</header>
 														<div class="panel-body text-center">
-															<div id="${product.getId()}" class="col-lg-8">
-																ajay</div>
+															<div id="1" class="col-lg-8"></div>
 															<div class="col-lg-4">
 																<div class="row">description</div>
 																<div class="row">details</div>
@@ -372,10 +371,7 @@
 														</div>
 													</section>
 												</div>
-
 											</c:forEach>
-
-
 											<form action="SpendWise">
 												<input type="hidden" name="myAction" value="saveKitty">
 												<button type="submit" class="btn btn-warning btn-block">See
@@ -439,51 +435,51 @@
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
 	<script>
-      //knob
-      $(function() {
-        $(".knob").knob({
-          'draw': function() {
-            $(this.i).val(this.cv + '%')
-          }
-        })
-      });
+		//knob
+		$(function() {
+			$(".knob").knob({
+				'draw' : function() {
+					$(this.i).val(this.cv + '%')
+				}
+			})
+		});
 
-      //carousel
-      $(document).ready(function() {
-        $("#owl-slider").owlCarousel({
-          navigation: true,
-          slideSpeed: 300,
-          paginationSpeed: 400,
-          singleItem: true
+		//carousel
+		$(document).ready(function() {
+			$("#owl-slider").owlCarousel({
+				navigation : true,
+				slideSpeed : 300,
+				paginationSpeed : 400,
+				singleItem : true
 
-        });
-      });
+			});
+		});
 
-      //custom select box
+		//custom select box
 
-      $(function() {
-        $('select.styled').customSelect();
-      });
+		$(function() {
+			$('select.styled').customSelect();
+		});
 
-      /* ---------- Map ---------- */
-      $(function() {
-        $('#map').vectorMap({
-          map: 'world_mill_en',
-          series: {
-            regions: [{
-              values: gdpData,
-              scale: ['#000', '#000'],
-              normalizeFunction: 'polynomial'
-            }]
-          },
-          backgroundColor: '#eef3f7',
-          onLabelShow: function(e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-          }
-        });
-      });
-    </script>
-<script src="js/app.js"></script>
+		/* ---------- Map ---------- */
+		$(function() {
+			$('#map').vectorMap({
+				map : 'world_mill_en',
+				series : {
+					regions : [ {
+						values : gdpData,
+						scale : [ '#000', '#000' ],
+						normalizeFunction : 'polynomial'
+					} ]
+				},
+				backgroundColor : '#eef3f7',
+				onLabelShow : function(e, el, code) {
+					el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+				}
+			});
+		});
+	</script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
