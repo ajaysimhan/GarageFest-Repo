@@ -1,0 +1,47 @@
+
+
+.flexColumn{
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: column;
+}
+
+.flexRow{
+	display: flex;
+	flkex-basis: 100%;
+	flex-direction: row;
+}
+
+.flex70{
+	flex-basis: 70%;
+}
+
+.flex30{
+	flex-basis: 30%;
+}
+
+.flex20{
+	flex-basis: 20%;
+	height: 10vh;
+}
+
+
+.flex60{
+	flex-basis: 60%;
+	height: 30vh;
+}
+
+.flex40{
+	flex-basis: 40%;
+	height: 20vh;
+}
+
+.flex80{
+	flex-basis: 80%;
+	height: 40vh;
+}
+
+.marginTop{
+	margin-top: 10px;
+}
+

@@ -40,6 +40,26 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <style>
+  .balance{
+  font-size:35px; 
+  color: #000000; 
+  float: right;
+ 	 position: relative;
+    width: 500px;
+    height: 200px;
+   top:80px;
+  }
+  .kitty{
+   position: relative;
+   left:20%;
+  }
+  .kittytext{
+   font-size:20px; 
+    position: relative;
+  	left:5%;
+  }
+  </style>
 </head>
 
 <body>
@@ -54,7 +74,6 @@
 
       <!--logo start-->
       <a class="logo"> <form action="SpendWise">
-            <i class="icon_house_alt"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Spend <span class="lite">Wise</button>   
          </form></span></a>
@@ -318,7 +337,7 @@
    <li>
       <a>
          <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="icon_documents_alt"></i>
             <input type="hidden" name="myAction" value="addAccounts">
             <button type="submit">Accounts</button>   
          </form>
@@ -365,9 +384,9 @@
             <div class="col-lg-12">
               <h3 class="page-header"><i class="icon_genius"></i>Save Kitty</h3>
               <ol class="breadcrumb">
-                <li><i class="fa fa-home"></i><a>
+                <li><a>
                  <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="fa fa-home"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Home</button>   
          </form>
@@ -386,6 +405,24 @@
               <div class="panel-body">
                 <div class="panel panel-primary">
                   <div class="panel-heading">Savekitty Details</div>                  
+                  <div class="balance">Balance<br>
+                  <span  <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
+                  style="color: green;"
+                  <%}else{%>
+                  style="color: red;"
+                  <%} %>
+                  >$5000</span>
+                  </div>
+                  <div class="kitty">
+                <% if( (boolean)request.getAttribute("kittymood")==true){  %> 
+         <img src="img/kitty/happykitty.gif" alt="kitty not found" width="350" height="350">
+         <div class="kittytext" style="color:#009900">Your account has enough balance which will be transferred at the end of the month</div> 
+		<%}else{%>
+                   <img src="img/kitty/sadkitty.gif" alt="kitty not found" width="300" height="300">
+                    <div class="kittytext" style="color:#ff0000"> Your balance is low!!!</div> 
+                   <%} %>
+                   </div>
+                                  
                 </div>  
                 
                             

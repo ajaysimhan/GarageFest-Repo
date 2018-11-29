@@ -1089,7 +1089,12 @@ a.logo {
 
 }
 
-
+a.logo button{
+	border-style: none !important;
+    background: #1a2732;
+    background-color: #1a2732;
+    color: #fed189;
+}
 
 a.logo:hover, a.logo:focus {
 
@@ -1817,10 +1822,18 @@ div[data-role="editor-toolbar"] {
 
   Font-size: 15px;
 
-  margin-right: 5px;
+ margin-right: 5px; 
 
 }
 
+.breadcrumb li a i{
+    color: #797979;
+}
+.breadcrumb li a button{
+    border-style: none;
+    background-color: #ffffff;
+    color: #007aff;
+}
 .breadcrumb > .active {
 
   color: #d4d4d4;
