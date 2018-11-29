@@ -3,6 +3,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="products.ProductDTO"%>
 <html lang="en">
+<<<<<<< HEAD
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -860,6 +861,8 @@
    </body>
 </html>
 =======
+=======
+>>>>>>> parent of 3770cc1... changes
 
 <head>
 <meta charset="utf-8">
@@ -1138,6 +1141,7 @@
 								<button type="submit">Spending</button>
 							</form>
 					</a></li>
+<<<<<<< HEAD
 					<li>
       <a>
          <form action="SpendWise">
@@ -1147,6 +1151,8 @@
          </form>
       </a>
    </li>
+=======
+>>>>>>> parent of 3770cc1... changes
 					<li class="active"><a>
 							<form action="SpendWise">
 								<i class="icon_desktop"></i> <input type="hidden"
@@ -1177,6 +1183,7 @@
 							<i class="icon_desktop"></i>Products
 						</h3>
 						<ol class="breadcrumb">
+<<<<<<< HEAD
 							<li>
 							<a>
               <form action="SpendWise">
@@ -1808,6 +1815,15 @@
          </form>
          </a>
 							</li>
+=======
+							<li><i class="fa fa-home"></i><a>
+									<form action="SpendWise">
+										<i class="icon_house_alt"></i> <input type="hidden"
+											name="myAction" value="home">
+										<button type="submit">Home</button>
+									</form>
+							</a></li>
+>>>>>>> parent of 3770cc1... changes
 							<li><i class="icon_desktop"></i>Products</li>
 
 						</ol>
