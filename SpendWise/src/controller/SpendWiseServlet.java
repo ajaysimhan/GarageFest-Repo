@@ -2,7 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +15,9 @@ import accounts.Account;
 import accounts.AccountDTO;
 import model.BasicInfoModel;
 import model.LoginModel;
+import model.ReportsModel;
 import model.SaveKittyModel;
+import products.ProductManager;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -41,6 +43,11 @@ public class SpendWiseServlet extends HttpServlet {
 				rd1.forward(request, response);
 			}
 			break;
+		case ("getStarted"):
+			request.setAttribute("action", "");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			rd1.forward(request, response);
+			break;
 		case "addAccounts":
 			request.setAttribute("action", "addAccount");
 			RequestDispatcher rd2 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
@@ -55,27 +62,30 @@ public class SpendWiseServlet extends HttpServlet {
 			rd3.forward(request, response);
 			break;
 		case "analyseSpending":
-			ArrayList<String> transactionList = new ArrayList<String>();
-			request.setAttribute("transactionList", transactionList);
+			HashMap<String, Integer> transactionTypes = null;
+			ReportsModel rm = new ReportsModel();
+			rm.buildWasteTransactionList(transactionTypes);
+			request.setAttribute("categoryList", rm.getCategories());
+			request.setAttribute("expenseList", rm.getExpenses());
 			RequestDispatcher rd4 = request.getRequestDispatcher("/WEB-INF/reports.jsp");
 			rd4.forward(request, response);
 			break;
-		case "suggestPortfolio":
-			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
-			rd5.forward(request, response);
+		case "dataCapture":
+			RequestDispatcher rd8 = request.getRequestDispatcher("/WEB-INF/datacapture.jsp");
+			rd8.forward(request, response);
 			break;
 		case "saveKitty":
-			RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
-			SaveKittyModel kittyModel = new SaveKittyModel();
-			boolean kittymood = kittyModel.getKittyMood();
-			request.setAttribute("kittymood",kittymood);
-			rd6.forward(request, response);
+            RequestDispatcher rd6 = request.getRequestDispatcher("/WEB-INF/savekitty.jsp");
+            SaveKittyModel sm = new SaveKittyModel();
+            request.setAttribute("kittymood", sm.getKittyMood());
+		rd6.forward(request, response);
+		break;
+
+		case "home":
+			RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
+			rd7.forward(request, response);
 			break;
 
-            case "home":
-                RequestDispatcher rd7 = request.getRequestDispatcher("/WEB-INF/index.jsp");
-                rd7.forward(request, response);
-                break;
 		}
 
 		out.flush();
@@ -104,15 +114,15 @@ public class SpendWiseServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 			break;
-		case ("getStarted"):
+		case ("suggestPortfolio"):
 			try {
 				BasicInfoModel basicInfo = new BasicInfoModel(request);
 				basicInfo.saveBasicInfo();
+				ProductManager productManager = new ProductManager(request);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			request.setAttribute("action", "");
-			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/accounts.jsp");
+			RequestDispatcher rd1 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd1.forward(request, response);
 			break;
 		}

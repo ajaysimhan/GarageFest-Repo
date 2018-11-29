@@ -55,7 +55,6 @@
       <!--logo start-->
       <a class="logo">
       <form action="SpendWise">
-            <i class="icon_house_alt"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Spend <span class="lite">Wise</span></button>   
          </form>
@@ -320,7 +319,7 @@
    <li>
       <a>
          <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="icon_documents_alt"></i>
             <input type="hidden" name="myAction" value="addAccounts">
             <button type="submit">Accounts</button>   
          </form>
@@ -368,9 +367,9 @@
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-laptop"></i>Home</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a>
+              <li><a>
               <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="fa fa-home"></i></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Home</button>   
          </form>
@@ -380,7 +379,7 @@
         </div>
 
         <div class="row">
-        <form action="SpendWise" method="post">
+        <form action="SpendWise">
           <div class="col-md-12 portlets">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -391,39 +390,13 @@
               </br></br></br>
               Start by adding a few details about yourself and click on the get started button
               </br></br></br>
-              <form class="form-horizontal" method="post">
+              <form class="form-horizontal">
                       <!-- Age -->
                       <div class="form-group">
                         <label class="control-label col-lg-2" for="title">Your Age</label>
                         <div class="col-lg-10">
                           <input type="text" class="form-control" id="title" name=age required>
                         </div>
-                      </div>
-                      <!-- Annual Income -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="content">Your Annual Income</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=annualIncome required>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">Your Net Worth</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=netWorth required>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">The Total Debt you have</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=totaldebt required>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">Interest rate of debt</label>
-                        <div class="col-lg-10">
-                          <input type="text" class="form-control" id="title" name=debtInterestRate required>
-                        </div>
-                      </div>
                     </form>
               <div class="col-lg-offset-8 col-lg-9">
               <input type="hidden" name="myAction" value="getStarted">

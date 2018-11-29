@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@ page import="java.util.ArrayList"%>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,11 +47,38 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+
+<script language="javascript">
+    window.onload = function() {
+	pieChart.data.labels = document.getElementById("#1").value.replace("[","").replace("]", "").split(",");
+	pieChart.data.datasets.push({
+	    label : 'Expenses',
+	    backgroundColor : [ 'rgba(255,99,132,0.6)', 
+		                    'rgba(54,162,235,0.6)',
+		                    'rgba(255,206,86,0.6)', 
+		                    'rgba(111,255,8,0.6)',
+		                    'rgba(169,125,250,0.6)', 
+		                    'rgba(119,247,245,0.6)' ],
+	    data : document.getElementById("#2").value.replace("[", "").replace("]", "").split(","),
+		hoverBorderWidth : 1,
+        hoverBorderColor : '#777'
+	});
+	pieChart.update();
+    };
+</script>
 </head>
 
 <body>
+	<%
+	    ArrayList<String> categoryList = (ArrayList<String>) request.getAttribute("categoryList");
+		ArrayList<Integer> expenseList = (ArrayList<Integer>) request.getAttribute("expenseList");
+	%>
+
+
        <!-- container section start -->
        <section id="container" class="">
+		<input type="hidden" id="#1" value="<%=categoryList%>" /> 
+		<input type="hidden" id="#2" value="<%=expenseList%>" />
 
 
               <header class="header dark-bg">
@@ -64,7 +91,6 @@
 
                      <!--logo start-->
                      <a class="logo"> <form action="SpendWise">
-            <i class="icon_house_alt"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Spend <span class="lite">Wise</button>   
          </form></span></a>
@@ -277,7 +303,7 @@
    <li>
       <a>
          <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="icon_documents_alt"></i>
             <input type="hidden" name="myAction" value="addAccounts">
             <button type="submit">Accounts</button>   
          </form>
@@ -326,9 +352,9 @@
                                                 <i class="icon_piechart"></i>ANALYSIS' REPORTS
                                          </h3>
                                          <ol class="breadcrumb">
-                                                <li><i class="fa fa-home"></i><a>
+                                                <li><a>
                                                  <form action="SpendWise">
-            <i class="icon_house_alt"></i>
+            <i class="fa fa-home"></i>
             <input type="hidden" name="myAction" value="home">
             <button type="submit">Home</button>   
          </form>
@@ -357,25 +383,8 @@
 
                   Chart.defaults.global.defaultFontSize = 15;
                   Chart.defaults.global.defaultFontColor = '#000';
-                  let pieChart = new Chart(myChart, {
+		    var pieChart = new Chart(myChart, {
                      type : 'pie',
-                     data : {
-                         labels : [ 'Medical', 'Education', 'Entertainment',
-                               'Travel', 'Food', 'Shopping' ],
-                         datasets : [ {
-                           label : 'Expenses',
-                           data : [ 1245, 2546, 784, 400, 9457, 7445 ],
-                           backgroundColor : [ 'rgba(255,99,132,0.6)',
-                                  'rgba(54,162,235,0.6)',
-                                  'rgba(255,206,86,0.6)',
-                                  'rgba(111,255,8,0.6)',
-                                  'rgba(169,125,250,0.6)',
-                                  'rgba(119,247,245,0.6)' ],
-                           borderWidth : 1,
-                           hoverBorderWidth : 1,
-                           hoverBorderColor : '#777'
-                         } ]
-                     },
                      options : {
                          legend : {
                            display : true,
@@ -404,20 +413,20 @@
                                                                      length: a paragraph is a group of at least five sentences, a
                                                                      paragraph is half a page long, etc. In reality, though, the
                                                                      unity and coherence of ideas among sentences is what
-                                                                     constitutes a paragraph. A paragraph is defined as ‚Äúa group of
-                                                                     sentences or a single sentence that forms a unit‚Äù (Lunsford
-                                                                     and Connors 116). Length and appearance do not determine
-                                                                     whether a section in a paper is a paragraph. For instance, in
-                                                                     some styles of writing, particularly journalistic styles, a
-                                                                     paragraph can be just one sentence long. Ultimately, a
-                                                                     paragraph is a sentence or group of sentences that support one
-                                                                     main idea. In this handout, we will refer to this as the
-                                                                     ‚Äúcontrolling idea,‚Äù because it controls what happens in the
-                                                                     rest of the paragraph.</div>
+										constitutes a paragraph. A paragraph is defined as ‚??a group
+										of sentences or a single sentence that forms a unit‚?ù
+										(Lunsford and Connors 116). Length and appearance do not
+										determine whether a section in a paper is a paragraph. For
+										instance, in some styles of writing, particularly journalistic
+										styles, a paragraph can be just one sentence long. Ultimately,
+										a paragraph is a sentence or group of sentences that support
+										one main idea. In this handout, we will refer to this as the
+										‚??controlling idea,‚?ù because it controls what happens in
+										the rest of the paragraph.</div>
                                                               <form action="SpendWise">
-                                                                <input type="hidden" name="myAction" value="suggestPortfolio">
-                                                                     <button type="submit" class="btn btn-warning btn-block">See
-                                                                           Suggested Portfolios</button>
+                                                                <input type="hidden" name="myAction" value="dataCapture">
+                                                                     <button type="submit" class="btn btn-warning btn-block">I
+                                                                           am ready to begin</button>
                                                               </form>
                                                        </div>
                                                 </div>

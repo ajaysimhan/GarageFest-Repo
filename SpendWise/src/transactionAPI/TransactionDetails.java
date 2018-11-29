@@ -12,17 +12,19 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import model.BasicInfoModel;
+
 public class TransactionDetails {
 	ArrayList<TransactionDTO> dtos = new ArrayList<>();
-	
+
 	public ArrayList<TransactionDTO> getDtos() {
 		return dtos;
 	}
-	
+
 	public static TransactionDetails getTransactionDetails(int accNo) {
 		TransactionDetails transactionDetails = new TransactionDetails();
 		try {
-			String filePath = "resources/transactions/" + accNo + ".txt";
+			String filePath = BasicInfoModel.FILE_PATH + "/transactions/" + accNo + ".txt";
 			String transactionData = FileUtils.readFileToString(new File(filePath));
 			transactionDetails.buildTransactions(transactionData);
 		} catch (IOException e) {
@@ -30,15 +32,15 @@ public class TransactionDetails {
 		}
 		return transactionDetails;
 	}
-	
+
 	private void buildTransactions(String transactionData) {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(transactionData);
-        JsonObject json = (JsonObject) element;
-        JsonArray jsonArray = json.getAsJsonArray("transaction");
-        for(JsonElement j : jsonArray) {
-        	TransactionDTO transactionDTO = new Gson().fromJson(j.toString(), TransactionDTO.class);
-        	dtos.add(transactionDTO);
-        }
+		JsonObject json = (JsonObject) element;
+		JsonArray jsonArray = json.getAsJsonArray("transaction");
+		for (JsonElement j : jsonArray) {
+			TransactionDTO transactionDTO = new Gson().fromJson(j.toString(), TransactionDTO.class);
+			dtos.add(transactionDTO);
+		}
 	}
 }
