@@ -2,7 +2,8 @@ package products;
 
 import java.util.ArrayList;
 
-import model.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
 import risk.RiskAlgo;
 import suggestion.SuggestionDTO;
 import transactions.TransactionDTO;
@@ -13,7 +14,7 @@ public class ProductManager {
 	public String riskCategory;
 	public SuggestionDTO suggestion;
 
-	public ProductManager(HttpServletRequest request){
+	public ProductManager(HttpServletRequest request) throws Exception{
 		
 		initializeProducts();
 		request.setAttribute("productlist", products);
@@ -21,13 +22,12 @@ public class ProductManager {
 		request.setAttribute("suggestion", suggestion);
 	}
 	
-	private void initializeProducts() {
+	private void initializeProducts() throws Exception {
 		
-		RiskAlgo riskAlgorithm = new RiskAlgo();
 		
-		double financialRisk = riskAlgorithm.getFinancialRisk();
-		riskCategory = riskAlgorithm.getRiskCategory(financialRisk);
-		products = riskAlgorithm.getProductsforRisk(financialRisk);
-		suggestion = riskAlgorithm.getSuggestion();
+		double financialRisk = RiskAlgo.getFinancialRisk();
+		riskCategory = RiskAlgo.getRiskCategory(financialRisk);
+		products = RiskAlgo.getProductsforRisk(financialRisk);
+		suggestion = RiskAlgo.getSuggestion();
 	}
 }

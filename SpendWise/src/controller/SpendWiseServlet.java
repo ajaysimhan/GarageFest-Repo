@@ -16,6 +16,7 @@ import accounts.AccountDTO;
 import model.BasicInfoModel;
 import model.LoginModel;
 import model.ReportsModel;
+import products.ProductManager;
 
 /**
  * Servlet implementation class SpendWiseServlet
@@ -64,7 +65,11 @@ public class SpendWiseServlet extends HttpServlet {
 			rd4.forward(request, response);
 			break;
 		case "suggestPortfolio":
-			//ProductManager productManager = new ProductManager(request);
+			try {
+				ProductManager productManager = new ProductManager(request);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			RequestDispatcher rd5 = request.getRequestDispatcher("/WEB-INF/products.jsp");
 			rd5.forward(request, response);
 			break;
