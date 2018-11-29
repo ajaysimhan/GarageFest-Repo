@@ -169,24 +169,28 @@ public class RiskAlgo
     	ArrayList <ProductDTO> productArray = new ArrayList<>();
 		if(financialRisk<10) {
 			ProductDTO pr1 = new ProductDTO();
+			pr1.setId(1);
 			pr1.setName("SpendWise Long-Term Debt Conservative Fund");
 			pr1.setFixedIncomeBonds(100);
 			productArray.add(pr1);
 			
 		}else if(financialRisk<20) {
 			ProductDTO pr2 = new ProductDTO();
+			pr2.setId(2);
 			pr2.setName("iShares Debt and index Conservative Fund");
 			pr2.setFixedIncomeBonds(90);
 			pr2.setExchangeTradedFund(10);
 			productArray.add(pr2);
 		}else if(financialRisk<40) {
 			ProductDTO pr3 = new ProductDTO();
+			pr3.setId(3);
 			pr3.setName("DSP Black Rock fixed income  Fund");
 			pr3.setFixedIncomeBonds(70);
 			pr3.setExchangeTradedFund(10);
 			pr3.setLargeCapStocks(20);
 			productArray.add(pr3);
 			ProductDTO pr4 = new ProductDTO();
+			pr4.setId(4);
 			pr4.setName("CH Inkan KTU wealth conservation Fund");
 			pr4.setFixedIncomeBonds(70);
 			pr4.setExchangeTradedFund(20);
@@ -194,6 +198,7 @@ public class RiskAlgo
 			productArray.add(pr4);
 		}else if(financialRisk<60) {
 			ProductDTO pr5 = new ProductDTO();
+			pr5.setId(5);
 			pr5.setName("SpendWise L exteria Balanced UTK Fund");
 			pr5.setFixedIncomeBonds(50);
 			pr5.setExchangeTradedFund(20);
@@ -201,6 +206,7 @@ public class RiskAlgo
 			pr5.setMidCapStocks(10);
 			productArray.add(pr5);
 			ProductDTO pr6 = new ProductDTO();
+			pr6.setId(6);
 			pr6.setName("Value Line Asset Allocation Fund");
 			pr6.setFixedIncomeBonds(40);
 			pr6.setExchangeTradedFund(30);
@@ -208,6 +214,7 @@ public class RiskAlgo
 			pr6.setMidCapStocks(10);
 			productArray.add(pr6);
 			ProductDTO pr7 = new ProductDTO();
+			pr7.setId(7);
 			pr7.setName("Fidelity® Balanced Fund");
 			pr7.setFixedIncomeBonds(40);
 			pr7.setExchangeTradedFund(20);
@@ -216,6 +223,7 @@ public class RiskAlgo
 			productArray.add(pr7);
 		}else if(financialRisk<80) {
 			ProductDTO pr8 = new ProductDTO();
+			pr8.setId(8);
 			pr8.setName("MFS® Growth Allocation Fund");
 			pr8.setFixedIncomeBonds(20);
 			pr8.setExchangeTradedFund(20);
@@ -224,6 +232,7 @@ public class RiskAlgo
 			pr8.setSmallAndMicroCapStocks(10);
 			productArray.add(pr8);
 			ProductDTO pr9 = new ProductDTO();
+			pr9.setId(9);
 			pr9.setName("AR Yape Growth Portfolio™");
 			pr9.setFixedIncomeBonds(10);
 			pr9.setExchangeTradedFund(30);
@@ -232,6 +241,7 @@ public class RiskAlgo
 			pr9.setSmallAndMicroCapStocks(20);
 			productArray.add(pr9);
 			ProductDTO pr10 = new ProductDTO();
+			pr10.setId(10);
 			pr10.setName("CO Lgate® Balanced Fund");
 			pr10.setFixedIncomeBonds(25);
 			pr10.setLargeCapStocks(30);
@@ -240,6 +250,7 @@ public class RiskAlgo
 			productArray.add(pr10);
 		}else if(financialRisk<95) {
 			ProductDTO pr11 = new ProductDTO();
+			pr11.setId(11);
 			pr11.setName("Loomis Sayles Growth A Fund");
 			pr11.setFixedIncomeBonds(10);
 			pr11.setExchangeTradedFund(25);
@@ -248,6 +259,7 @@ public class RiskAlgo
 			pr11.setSmallAndMicroCapStocks(25);
 			productArray.add(pr11);
 			ProductDTO pr12 = new ProductDTO();
+			pr12.setId(12);
 			pr12.setName("PRIMECAP Odyssey Aggressive Growth™");
 			pr12.setFixedIncomeBonds(10);
 			pr12.setExchangeTradedFund(30);
@@ -257,6 +269,7 @@ public class RiskAlgo
 			productArray.add(pr12);
 		}else if(financialRisk<=100) {
 			ProductDTO pr13 = new ProductDTO();
+			pr13.setId(13);
 			pr13.setName("AJ umam Growth Aggressive Fund");
 			pr13.setExchangeTradedFund(25);
 			pr13.setLargeCapStocks(15);

@@ -2,6 +2,7 @@ package products;
 
 public class ProductDTO {
 	String name;
+	int id;
 	int fixedIncomeBonds;
 	int exchangeTradedFund;
 	int largeCapStocks;
@@ -9,11 +10,18 @@ public class ProductDTO {
 	int smallAndMicroCapStocks;
 	
 	
+	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public int getFixedIncomeBonds() {
 		return fixedIncomeBonds;
