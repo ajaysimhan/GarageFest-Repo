@@ -318,7 +318,7 @@ padding-top: 250px;
                                                 <li><a href="#"><i class="icon_clock_alt"></i> Timeline</a>
                                                 </li>
                                                 <li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-                                                <li><a href="login.html"><i class="icon_key_alt"></i>
+                                                <li><a href="login.jsp"><i class="icon_key_alt"></i>
                                                               Log Out</a></li>
                                                 <li><a href="documentation.html"><i class="icon_key_alt"></i>
                                                               Documentation</a></li>
@@ -361,6 +361,15 @@ padding-top: 250px;
             <i class="icon_piechart"></i>
             <input type="hidden" name="myAction" value="analyseSpending">
             <button type="submit">Spending</button>   
+         </form>
+      </a>
+   </li>
+   <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
          </form>
       </a>
    </li>

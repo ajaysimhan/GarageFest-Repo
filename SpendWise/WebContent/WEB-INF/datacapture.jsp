@@ -313,7 +313,7 @@
                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
               </li>
               <li>
-                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                <a href="login.jsp"><i class="icon_key_alt"></i> Log Out</a>
               </li>
               <li>
                 <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
@@ -335,7 +335,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-   <li class="active">
+   <li>
       <a>
          <form action="SpendWise">
             <i class="icon_house_alt"></i>
@@ -359,6 +359,15 @@
             <i class="icon_piechart"></i>
             <input type="hidden" name="myAction" value="analyseSpending">
             <button type="submit">Spending</button>   
+         </form>
+      </a>
+   </li>
+   <li class="active">
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
          </form>
       </a>
    </li>
@@ -402,6 +411,7 @@
             <button type="submit">Home</button>   
          </form>
          </a></li>
+         <li><i class="icon_documents_alt"></i>User Info</li>
             </ol>
           </div>
         </div>

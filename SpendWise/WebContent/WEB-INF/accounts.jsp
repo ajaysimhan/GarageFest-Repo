@@ -46,6 +46,25 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  
+    <style>
+  .description{
+   position: relative;
+  width: 50%;
+  height: 250px;
+   font-size: 17px;
+  } 
+  .accountskitty{
+ position: relative;
+ float: right;
+  width: 400px;
+  height: 200px;
+  }
+  .firsttext{
+  font-size: 20px;
+  color: #009900;
+ }
+  </style>
 </head>
 
 <body>
@@ -234,7 +253,7 @@
 							<li><a href="#"><i class="icon_clock_alt"></i> Timeline</a>
 							</li>
 							<li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-							<li><a href="login.html"><i class="icon_key_alt"></i>
+							<li><a href="login.jsp"><i class="icon_key_alt"></i>
 									Log Out</a></li>
 							<li><a href="documentation.html"><i class="icon_key_alt"></i>
 									Documentation</a></li>
@@ -280,6 +299,15 @@
                      </form>
                      </a>
                   </li>
+                  <li>
+      <a>
+         <form action="SpendWise">
+            <i class="icon_documents_alt"></i>
+            <input type="hidden" name="myAction" value="dataCapture">
+            <button type="submit">User Info</button>   
+         </form>
+      </a>
+   </li>
                   <li>
                   <a>
                      <form action="SpendWise">
@@ -337,12 +365,20 @@
 								</h2>
 							</div>
 							<div class="panel-body">
-								If planning your purchases in advance is a good idea, buying
-								something on the spur of the moment is a terrible one. Follow
-								these tips to avoid making shopping decisions for the wrong
-								reasons: </br> </br> </br>
+							
+							 <div class="accountskitty">
+            				<img src="img/kitty/accounts.gif">
+            				</div>
+            				<div class= "description">
+							  <span class="firsttext">Great  decision!!!</span><br><br>  
+						As a first step you can add any one of your accounts here.
+						I will automatically find about all your accounts and compile
+						the transactions.<br><br>
+						Click Add Accounts to get started.
+						 <br> <br> 
+							</div>
 								<form action="SpendWise">
-									<div class="col-lg-offset-8 col-lg-9">
+									<div class="col-lg-offset-5 col-lg-9">
 										<input type="hidden" name="myAction" value="addAccounts">
 										<button type="submit" class="btn btn-primary">Add
 											Accounts</button>
@@ -447,21 +483,16 @@
 								<div class="panel panel-primary">
 									<div class="panel-heading">You have successfully added
 										accounts</div>
-									<div class="panel-content">Paragraphs are the building
-										blocks of papers. Many students define paragraphs in terms of
-										length: a paragraph is a group of at least five sentences, a
-										paragraph is half a page long, etc. In reality, though, the
-										unity and coherence of ideas among sentences is what
-										constitutes a paragraph. A paragraph is defined as “a group
-										of sentences or a single sentence that forms a unit”
-										(Lunsford and Connors 116). Length and appearance do not
-										determine whether a section in a paper is a paragraph. For
-										instance, in some styles of writing, particularly journalistic
-										styles, a paragraph can be just one sentence long. Ultimately,
-										a paragraph is a sentence or group of sentences that support
-										one main idea. In this handout, we will refer to this as the
-										“controlling idea,” because it controls what happens in
-										the rest of the paragraph.</div>
+									<div class="panel-content">
+									
+										<span style="font-size: 20px; color:#0066ff"><b>Well done!!!</b></span><br><br>
+
+										With your help I have collected data about all your accounts. I have also fetched all your transactions for the last month as well <span style="color: #ff9900;">(Impressed?!)</span><br>
+										
+										I have categorized the expenditures and compiled a chart of all your unnecessary expenses.<br><br>
+										
+										Take a look here 
+										</div>
 									<form action="SpendWise">
 										<input type="hidden" name="myAction" value="analyseSpending">
 										<button type="submit" class="btn btn-warning btn-block">Analyse
