@@ -384,10 +384,9 @@
                                                 VALUE="${product.getId()}" /> ${product.getName()} 
                                           </header>
                                           <div class="panel-body text-center">
-                                             <div>${product.getId()}</div>
                                              <div id="${product.getId()}" class="col-lg-8"></div>
-                                             <div class="row">description</div>
-                                             <div class="row">details</div>
+                                             <div class="row"></div>
+                                             <div class="row"></div>
                                           </div>
                                         </section>
                                     </div>

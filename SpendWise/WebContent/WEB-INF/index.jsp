@@ -426,7 +426,7 @@
               
               <div class="overview">
                <span class="welcome">Welcome!!!!!!!!!!!!</span><br><br>
-I am Tom.<br>
+I am Kitty.<br>
 Have you ever wanted to save money but couldn't because of your spending habits. <br>Trust me I know the feeling. And how difficult it is to manage all of it by yourself.<br><br>
 <span style="color: #ff9900;">Don't worry.</span> <br>Now onwards, I will help you do that. <br>
 You just have to key in a few things and you are all set to save money alongside spending.<br>
